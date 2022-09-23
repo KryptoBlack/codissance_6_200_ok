@@ -44,8 +44,8 @@ export const RoleMemberListItem: React.FC<RoleMemberListItemProps> = (props) => 
 							alt={String(attendee.user.name)}
 							src={String(
 								attendee?.user.image
-									? `https://cdn.evental.app${attendee?.user.image}`
-									: `https://cdn.evental.app/images/default-avatar.jpg`
+									? attendee?.user.image
+									: `https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/default-avatar.jpg`
 							)}
 							className="rounded-md"
 							layout="fill"

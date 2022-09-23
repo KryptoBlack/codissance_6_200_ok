@@ -110,7 +110,7 @@ export const EditEventForm: React.FC<Props> = (props) => {
 							<AvatarUpload
 								files={files}
 								setFiles={setFiles}
-								placeholderImageUrl={`https://cdn.evental.app${event.image}`}
+								placeholderImageUrl={event.image}
 							/>
 						</div>
 					</Tooltip>

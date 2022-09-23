@@ -103,7 +103,7 @@ model Event {
   name         String
   location     String?
   address      String?
-  level        EventLevel    @default(TRIAL)
+  level        EventLevel    @default(PRO)
   timeFormat   TimeFormat    @default(TWELVE_HOURS)
   startDate    DateTime
   endDate      DateTime

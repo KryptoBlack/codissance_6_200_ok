@@ -26,7 +26,7 @@ export const ImageUploadDialog: React.FC<Props> = (props) => {
 
 	useEffect(() => {
 		if (imageUploadResponse) {
-			onSubmit(`https://cdn.evental.app${imageUploadResponse.pathName}`);
+			onSubmit(imageUploadResponse.pathName);
 			setIsOpen(false);
 		}
 	}, [imageUploadResponse]);

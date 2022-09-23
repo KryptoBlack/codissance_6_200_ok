@@ -70,7 +70,7 @@ const ViewSessionPage: NextPage = () => {
 			additionalLinkTags={[
 				{
 					rel: 'icon',
-					href: `https://cdn.evental.app${event.image}`
+					href: event.image
 				}
 			]}
 			openGraph={{
@@ -79,7 +79,7 @@ const ViewSessionPage: NextPage = () => {
 				description: `View the attendees, speakers, and details of ${session.name} at ${event.name}`,
 				images: [
 					{
-						url: `https://cdn.evental.app${event.image}`,
+						url: event.image,
 						width: 300,
 						height: 300,
 						alt: `${event.name} Logo Alt`,
@@ -121,7 +121,7 @@ const ViewSessionPage: NextPage = () => {
 				</Column>
 			</PageWrapper>
 
-			<Footer color={event?.color} />
+			<Footer />
 		</>
 	);
 };

@@ -121,7 +121,7 @@ export const ViewSessionScreen = (props: Props) => {
 									>
 										<Image
 											source={{
-												uri: `https://cdn.evental.app${roleMember.attendee.user.image}`,
+												uri: roleMember.attendee.user.image,
 												width: 52,
 												height: 52
 											}}

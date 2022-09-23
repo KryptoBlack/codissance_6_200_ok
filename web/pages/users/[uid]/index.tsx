@@ -72,8 +72,8 @@ const ViewSessionPage: NextPage = () => {
 									alt={String(user.name)}
 									src={String(
 										user.image
-											? `https://cdn.evental.app${user.image}`
-											: `https://cdn.evental.app/images/default-avatar.jpg`
+											? user.image
+											: `https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/default-avatar.jpg`
 									)}
 									className="rounded-md"
 									layout="fill"

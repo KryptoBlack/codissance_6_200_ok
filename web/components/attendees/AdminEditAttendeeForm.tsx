@@ -156,7 +156,7 @@ export const AdminEditAttendeeForm: React.FC<Props> = (props) => {
 								<AvatarUpload
 									files={files}
 									setFiles={setFiles}
-									placeholderImageUrl={`https://cdn.evental.app${user.image}`}
+									placeholderImageUrl={user.image}
 								/>
 							</div>
 						</Tooltip>

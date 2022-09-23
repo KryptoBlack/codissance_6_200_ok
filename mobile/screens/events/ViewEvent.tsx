@@ -73,7 +73,7 @@ export const ViewEventScreen = (props: Props) => {
 							}}
 						>
 							<Image
-								source={{ uri: `https://cdn.evental.app${event.image}`, width: 52, height: 52 }}
+								source={{ uri: event.image, width: 52, height: 52 }}
 								style={{
 									backgroundColor: '#dedede',
 									borderRadius: 8,

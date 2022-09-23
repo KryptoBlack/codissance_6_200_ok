@@ -53,7 +53,7 @@ const RoleInvitePage: NextPage = () => {
 			additionalLinkTags={[
 				{
 					rel: 'icon',
-					href: `https://cdn.evental.app${event.image}`
+					href: event.image
 				}
 			]}
 		/>
@@ -112,7 +112,7 @@ const RoleInvitePage: NextPage = () => {
 					</Column>
 				</PageWrapper>
 
-				<Footer color={event?.color} />
+				<Footer />
 			</>
 		);
 	}
@@ -153,7 +153,7 @@ const RoleInvitePage: NextPage = () => {
 				</Column>
 			</PageWrapper>
 
-			<Footer color={event?.color} />
+			<Footer />
 		</>
 	);
 };

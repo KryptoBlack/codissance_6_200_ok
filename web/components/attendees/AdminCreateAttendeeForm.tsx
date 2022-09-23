@@ -72,7 +72,7 @@ export const AdminCreateAttendeeForm: React.FC<Props> = (props) => {
 					<AvatarUpload
 						files={files}
 						setFiles={setFiles}
-						placeholderImageUrl={`https://cdn.evental.app/images/default-avatar.jpg`}
+						placeholderImageUrl={`https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/default-avatar.jpg`}
 					/>
 
 					{errors.image?.message && <ErrorMessage>{errors.image?.message}</ErrorMessage>}

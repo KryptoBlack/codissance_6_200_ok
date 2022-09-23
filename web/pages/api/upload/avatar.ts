@@ -33,7 +33,7 @@ export default api({
 		}
 
 		const body: ImageUploadResponse = {
-			pathName: fileLocation
+			pathName: `fileLocation`
 		};
 
 		return body;

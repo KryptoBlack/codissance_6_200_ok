@@ -44,7 +44,7 @@ const ViewSessionCategoryPage: NextPage = () => {
 			additionalLinkTags={[
 				{
 					rel: 'icon',
-					href: `https://cdn.evental.app${event.image}`
+					href: event.image
 				}
 			]}
 			openGraph={{
@@ -58,7 +58,7 @@ const ViewSessionCategoryPage: NextPage = () => {
 					.format('YYYY/MM/DD')} at ${event.name}`,
 				images: [
 					{
-						url: `https://cdn.evental.app${event.image}`,
+						url: event.image,
 						width: 300,
 						height: 300,
 						alt: `${event.name} Logo Alt`,
@@ -91,7 +91,7 @@ const ViewSessionCategoryPage: NextPage = () => {
 				</Column>
 			</PageWrapper>
 
-			<Footer color={event?.color} />
+			<Footer />
 		</>
 	);
 };

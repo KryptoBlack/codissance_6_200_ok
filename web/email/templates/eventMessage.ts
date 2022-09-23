@@ -44,7 +44,7 @@ const template = `
 
         <mj-text font-size="16px" color="#777777" font-family="Inter, Roboto, Arial" line-height="1.4">{{body}}
         </mj-text>
-        
+
            <mj-text font-size="13px" color="#777777" font-family="Inter, Roboto, Arial" line-height="1.4" align="left">
              <a href="{{messageUrl}}" style="color: #0066FF; text-decoration:none;">
                View Full Message
@@ -59,9 +59,9 @@ const template = `
 
         <mj-text font-size="12px" color="#777777" font-family="Inter, Roboto, Arial" line-height="1.4" align="center">
           You are receiving this email because you are attending <a href="{{eventUrl}}" style="color: #0066FF; text-decoration:none;">{{eventName}}</a>
-          
+
           <br />
-          
+
           To stop receiving emails from <a href="{{eventUrl}}" style="color: #0066FF; text-decoration:none;">{{eventName}}</a>, please <a href="{{eventUrl}}" style="color: #0066FF; text-decoration:none;">leave the event</a>.
         </mj-text>
 
@@ -105,7 +105,7 @@ export const sendEventMessage = async (args: SendEventMessageArgs) => {
 	}));
 
 	const templateData: EventMessageTemplateArgs = {
-		eventImageUrl: `https://cdn.evental.app${event.image}`,
+		eventImageUrl: event.image,
 		eventUrl: `https://evental.app/events/${event.slug}`,
 		eventName: event.name,
 		title,
