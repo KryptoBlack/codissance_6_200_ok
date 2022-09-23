@@ -14,11 +14,11 @@ const ContactPage: NextPage = () => {
 	return (
 		<>
 			<NextSeo
-				title="Contact — Evental"
+				title="Contact — Meetuppp"
 				description="Contact our team for support. We are here to help you with any questions you may have."
 				openGraph={{
 					url: 'https://evental.app/contact',
-					title: 'Contact — Evental',
+					title: 'Contact — Meetuppp',
 					description:
 						'Contact our team for support. We are here to help you with any questions you may have.',
 					images: [
@@ -26,7 +26,7 @@ const ContactPage: NextPage = () => {
 							url: 'https://cdn.evental.app/images/logo.jpg',
 							width: 389,
 							height: 389,
-							alt: 'Evental Logo Alt',
+							alt: 'Meetuppp Logo Alt',
 							type: 'image/jpeg'
 						}
 					]
@@ -40,7 +40,7 @@ const ContactPage: NextPage = () => {
 					<Column className="flex flex-col items-center">
 						<Heading>Contact Us</Heading>
 						<p className="mt-4 max-w-2xl text-center text-base text-gray-100">
-							Have some suggestions or feedback? Questions about Evental? Just want to have a chat?
+							Have some suggestions or feedback? Questions about Meetuppp? Just want to have a chat?
 							We'd love to hear from you.
 						</p>
 					</Column>
@@ -53,8 +53,8 @@ const ContactPage: NextPage = () => {
 								Questions/Support
 							</span>
 							<p className="text-center text-gray-600">
-								Have questions or need support regarding Evental? Reach out by filling out a support
-								ticket or emailing us at{' '}
+								Have questions or need support regarding Meetuppp? Reach out by filling out a
+								support ticket or emailing us at{' '}
 								<a
 									href="mailto:support@evental.app"
 									className="underline"
@@ -87,7 +87,7 @@ const ContactPage: NextPage = () => {
 								Contact Sales
 							</span>
 							<p className="text-center text-gray-600">
-								Considering using Evental? Not sure if Evental will meet your needs? Reach out to
+								Considering using Meetuppp? Not sure if Meetuppp will meet your needs? Reach out to
 								our team by booking a call or demo below, or email us at{' '}
 								<a
 									href="mailto:sales@evental.app"

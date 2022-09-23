@@ -20,18 +20,18 @@ const GuidesPage: NextPage = () => {
 
 			<PageWrapper>
 				<NextSeo
-					title="Guides — Evental"
+					title="Guides — Meetuppp"
 					description={`Need help getting started as an organizer or an attendee? Check out our guides.`}
 					openGraph={{
 						url: 'https://evental.app/guides',
-						title: 'Guides — Evental',
+						title: 'Guides — Meetuppp',
 						description: `Need help getting started as an organizer or an attendee? Check out our guides.`,
 						images: [
 							{
 								url: 'https://cdn.evental.app/images/logo.jpg',
 								width: 389,
 								height: 389,
-								alt: 'Evental Logo Alt',
+								alt: 'Meetuppp Logo Alt',
 								type: 'image/jpeg'
 							}
 						]
@@ -58,7 +58,7 @@ const GuidesPage: NextPage = () => {
 								Attendees
 							</span>
 							<p className="text-sm text-gray-600">
-								Attending an event on Evental and need some extra help? Checkout the following
+								Attending an event on Meetuppp and need some extra help? Checkout the following
 								attendee guides below.
 							</p>
 
@@ -86,7 +86,7 @@ const GuidesPage: NextPage = () => {
 						<GuideCategoryCard>
 							<span className="mb-1 block text-center text-xl font-bold md:text-2xl">Speakers</span>
 							<p className="text-sm text-gray-600">
-								Are you speaking at an event that is using Evental? Check out the following guides
+								Are you speaking at an event that is using Meetuppp? Check out the following guides
 								below to help you get started.
 							</p>
 

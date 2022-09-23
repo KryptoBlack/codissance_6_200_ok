@@ -16,7 +16,7 @@ const ErrorNotFoundPage: NextPage = () => {
 	return (
 		<>
 			<NextSeo
-				title="Page Not Found — Evental"
+				title="Page Not Found — Meetuppp"
 				description="This page has not been found. Please check the URL and try again."
 			/>
 

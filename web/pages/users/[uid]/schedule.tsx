@@ -24,18 +24,18 @@ const ViewSessionPage: NextPage = () => {
 
 	const Seo = user && (
 		<NextSeo
-			title={`${user.name} — Evental`}
-			description={`View ${user.name} at Evental.`}
+			title={`${user.name} — Meetuppp`}
+			description={`View ${user.name} at Meetuppp.`}
 			openGraph={{
 				url: `https://evental.app/users/${user.id}`,
-				title: `${user.name} — Evental`,
-				description: `View ${user.name} at Evental.`,
+				title: `${user.name} — Meetuppp`,
+				description: `View ${user.name} at Meetuppp.`,
 				images: [
 					{
 						url: 'https://cdn.evental.app/images/logo.jpg',
 						width: 389,
 						height: 389,
-						alt: 'Evental Logo Alt',
+						alt: 'Meetuppp Logo Alt',
 						type: 'image/jpeg'
 					}
 				]

@@ -31,18 +31,18 @@ const InvitingSessionMemberGuidePage: NextPage = () => {
 
 			<PageWrapper>
 				<NextSeo
-					title="Granting the Organizer role — Evental"
-					description={`Learn how to grant the organizer role to an attendee for your event on Evental.`}
+					title="Granting the Organizer role — Meetuppp"
+					description={`Learn how to grant the organizer role to an attendee for your event on Meetuppp.`}
 					openGraph={{
 						url: 'https://evental.app/guides/organizer/granting-the-organizer-role',
-						title: 'Granting the Organizer role — Evental',
-						description: `Learn how to grant the organizer role to an attendee for your event on Evental.`,
+						title: 'Granting the Organizer role — Meetuppp',
+						description: `Learn how to grant the organizer role to an attendee for your event on Meetuppp.`,
 						images: [
 							{
 								url: 'https://cdn.evental.app/images/logo.jpg',
 								width: 389,
 								height: 389,
-								alt: 'Evental Logo Alt',
+								alt: 'Meetuppp Logo Alt',
 								type: 'image/jpeg'
 							}
 						]
@@ -51,9 +51,9 @@ const InvitingSessionMemberGuidePage: NextPage = () => {
 
 				<div className="bg-primary-700 text-white">
 					<Column className="flex flex-col items-center">
-						<Heading>Granting the Organizer role — Evental</Heading>
+						<Heading>Granting the Organizer role — Meetuppp</Heading>
 						<p className="mt-4 text-base text-gray-100">
-							Learn how to grant the organizer role to an attendee for your event on Evental
+							Learn how to grant the organizer role to an attendee for your event on Meetuppp
 						</p>
 					</Column>
 				</div>

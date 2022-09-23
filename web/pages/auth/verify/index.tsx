@@ -32,18 +32,18 @@ const VerifyEmailPage: NextPage = () => {
 		return (
 			<PageWrapper>
 				<NextSeo
-					title="Verify Email — Evental"
-					description="Verify your email for your Evental account"
+					title="Verify Email — Meetuppp"
+					description="Verify your email for your Meetuppp account"
 					openGraph={{
 						url: 'https://evental.app/auth/verify',
-						title: 'Verify Email — Evental',
-						description: 'Verify your email for your Evental account',
+						title: 'Verify Email — Meetuppp',
+						description: 'Verify your email for your Meetuppp account',
 						images: [
 							{
 								url: 'https://cdn.evental.app/images/logo.jpg',
 								width: 389,
 								height: 389,
-								alt: 'Evental Logo Alt',
+								alt: 'Meetuppp Logo Alt',
 								type: 'image/jpeg'
 							}
 						]
@@ -66,18 +66,18 @@ const VerifyEmailPage: NextPage = () => {
 	return (
 		<PageWrapper>
 			<NextSeo
-				title="Verify Email — Evental"
-				description="Verify your email for your Evental account"
+				title="Verify Email — Meetuppp"
+				description="Verify your email for your Meetuppp account"
 				openGraph={{
 					url: 'https://evental.app/auth/verify',
-					title: 'Verify Email — Evental',
-					description: 'Verify your email for your Evental account',
+					title: 'Verify Email — Meetuppp',
+					description: 'Verify your email for your Meetuppp account',
 					images: [
 						{
 							url: 'https://cdn.evental.app/images/logo.jpg',
 							width: 389,
 							height: 389,
-							alt: 'Evental Logo Alt',
+							alt: 'Meetuppp Logo Alt',
 							type: 'image/jpeg'
 						}
 					]

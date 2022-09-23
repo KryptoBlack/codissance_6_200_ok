@@ -19,8 +19,8 @@ export default api.raw({
 
 		const workbook = new ExcelJS.Workbook();
 
-		workbook.creator = 'Evental.app';
-		workbook.lastModifiedBy = 'Evental.app';
+		workbook.creator = 'Meetuppp.app';
+		workbook.lastModifiedBy = 'Meetuppp.app';
 
 		const worksheet = workbook.addWorksheet('Your Schedule');
 

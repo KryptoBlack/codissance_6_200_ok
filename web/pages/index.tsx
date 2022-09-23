@@ -1,9 +1,10 @@
-import { useOrganizingEvents } from '@eventalapp/shared/hooks/queries/useOrganizingEvents';
 import { EventList } from 'components/events/EventList';
 import type { NextPage } from 'next';
 import { NextSeo } from 'next-seo';
 import Link from 'next/link';
 import React from 'react';
+
+import { useOrganizingEvents } from '@eventalapp/shared/hooks/queries/useOrganizingEvents';
 
 import { AspectImage } from '../components/guides/AspectImage';
 import Column from '../components/layout/Column';
@@ -15,25 +16,24 @@ import { LinkButton } from '../components/primitives/LinkButton';
 import { Paragraph } from '../components/primitives/Paragraph';
 
 const HomePage: NextPage = () => {
-
 	const { error: organizingEventsError, data: organizingEvents } = useOrganizingEvents();
 
 	return (
 		<>
 			<NextSeo
-				title="Evental — Event management software from the future"
-				description="Event management software that's highly intuitive. Your attendees and organizers will love using Evental for your in-person, hybrid, and virtual events."
+				title="Meetuppp — Event management software from the future"
+				description="Event management software that's highly intuitive. Your attendees and organizers will love using Meetuppp for your in-person, hybrid, and virtual events."
 				openGraph={{
 					url: 'https://evental.app',
-					title: 'Evental — Event management software from the future',
+					title: 'Meetuppp — Event management software from the future',
 					description:
-						"Event management software that's highly intuitive. Your attendees and organizers will love using Evental for your in-person, hybrid, and virtual events.",
+						"Event management software that's highly intuitive. Your attendees and organizers will love using Meetuppp for your in-person, hybrid, and virtual events.",
 					images: [
 						{
 							url: 'https://cdn.evental.app/images/logo.jpg',
 							width: 389,
 							height: 389,
-							alt: 'Evental Logo Alt',
+							alt: 'Meetuppp Logo Alt',
 							type: 'image/jpeg'
 						}
 					]
@@ -52,7 +52,7 @@ const HomePage: NextPage = () => {
 					</Heading>
 					<Paragraph className="mb-6 max-w-4xl text-center text-gray-600" variant="xl">
 						Event management software that's highly intuitive. Your attendees and organizers will
-						love using Evental for your in-person, hybrid, and virtual events.
+						love using Meetuppp for your in-person, hybrid, and virtual events.
 					</Paragraph>
 					<div className="z-10 grid grid-cols-2 gap-3">
 						<Link href="/events/create" passHref>
@@ -163,7 +163,7 @@ const HomePage: NextPage = () => {
 							Get the most out of your event
 						</Heading>
 						<Paragraph variant="lg" className="mb-5 max-w-3xl text-center text-gray-600 md:mb-10">
-							Evental is the only platform you'll ever need to setup, manage, attend, and review
+							Meetuppp is the only platform you'll ever need to setup, manage, attend, and review
 							events. We've built a platform that's simple, easy to use, and powerful.
 						</Paragraph>
 						<CardGrid>
@@ -246,7 +246,7 @@ const HomePage: NextPage = () => {
 									className="relative"
 									body={
 										<>
-											Use the Evental Organizer dashboard to customize your events branding to fit
+											Use the Meetuppp Organizer dashboard to customize your events branding to fit
 											your organizations needs. You can customize your event color/branding, logo,
 											and set links to your website, social media.
 										</>

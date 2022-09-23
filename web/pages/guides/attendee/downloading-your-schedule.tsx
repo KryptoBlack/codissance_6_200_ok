@@ -24,18 +24,18 @@ const AttendingASessionGuidePage: NextPage = () => {
 
 			<PageWrapper>
 				<NextSeo
-					title="Downloading your schedule — Evental"
+					title="Downloading your schedule — Meetuppp"
 					description={`Learn how to view and download your schedule on evental.`}
 					openGraph={{
 						url: 'https://evental.app/guides/attendee/downloading-your-schedule',
-						title: 'Downloading your schedule — Evental',
+						title: 'Downloading your schedule — Meetuppp',
 						description: `Learn how to view and download your schedule on evental.`,
 						images: [
 							{
 								url: 'https://cdn.evental.app/images/logo.jpg',
 								width: 389,
 								height: 389,
-								alt: 'Evental Logo Alt',
+								alt: 'Meetuppp Logo Alt',
 								type: 'image/jpeg'
 							}
 						]
