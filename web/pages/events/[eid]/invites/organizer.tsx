@@ -90,7 +90,7 @@ const OrganizerInvitePage: NextPage = () => {
 					</Column>
 				</PageWrapper>
 
-				<Footer color={event?.color} />
+				<Footer />
 			</>
 		);
 	}
@@ -130,7 +130,7 @@ const OrganizerInvitePage: NextPage = () => {
 				</Column>
 			</PageWrapper>
 
-			<Footer color={event?.color} />
+			<Footer />
 		</>
 	);
 };

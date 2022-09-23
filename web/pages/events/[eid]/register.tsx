@@ -107,7 +107,7 @@ const EventRegisterPage: NextPage = () => {
 					</Column>
 				</PageWrapper>
 
-				<Footer color={event?.color} />
+				<Footer />
 			</>
 		);
 	}
@@ -144,7 +144,7 @@ const EventRegisterPage: NextPage = () => {
 				</Column>
 			</PageWrapper>
 
-			<Footer color={event?.color} />
+			<Footer />
 		</>
 	);
 };
