@@ -18,16 +18,6 @@ import { LinkItem } from './LinkItem';
 import { LogoLinkItem } from './LogoLinkItem';
 import { NavigationWrapper } from './NavigationWrapper';
 
-const FreeEventalPro = (
-	<div className="w-full bg-green-500">
-		<Link href={`/pricing`}>
-			<a className="m-auto block py-1 text-center text-sm text-white">
-				Upgrade your event to PRO for free! Click to learn more
-			</a>
-		</Link>
-	</div>
-);
-
 export const Navigation: React.FC = () => {
 	const [isOpen, setIsOpen] = useState(false);
 
@@ -35,7 +25,6 @@ export const Navigation: React.FC = () => {
 
 	return (
 		<>
-			{FreeEventalPro}
 			<NavigationWrapper>
 				<NavigationMenuPrimitive.Root className="relative w-full">
 					<NavigationMenuPrimitive.List className="m-auto grid h-14 w-full max-w-7xl grid-cols-2 px-3 lg:grid-cols-9">
@@ -46,12 +35,6 @@ export const Navigation: React.FC = () => {
 
 						{/* Links (Desktop only) */}
 						<div className="col-span-5 hidden h-full flex-row justify-center lg:flex">
-							<div className="flex flex-row items-end">
-								<LinkItem link={`/pricing`} label={'Pricing'} />
-								<LinkItem link={`/contact`} label={'Contact'} />
-								<LinkItem link={`/guides`} label={'Guides'} />
-								<LinkItem link={`/events`} label={'Events'} />
-							</div>
 						</div>
 
 						{/* Hamburger (Mobile only)*/}

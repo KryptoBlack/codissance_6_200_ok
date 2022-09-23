@@ -1,12 +1,11 @@
+import { useOrganizingEvents } from '@eventalapp/shared/hooks/queries/useOrganizingEvents';
+import { EventList } from 'components/events/EventList';
 import type { NextPage } from 'next';
 import { NextSeo } from 'next-seo';
 import Link from 'next/link';
 import React from 'react';
 
-import { EventalProCard } from '../components/billing/EventalProCard';
 import { AspectImage } from '../components/guides/AspectImage';
-import { Card } from '../components/layout/Card';
-import { CardGrid } from '../components/layout/CardGrid';
 import Column from '../components/layout/Column';
 import { Footer } from '../components/layout/Footer';
 import PageWrapper from '../components/layout/PageWrapper';
@@ -14,9 +13,11 @@ import { Navigation } from '../components/navigation';
 import { Heading } from '../components/primitives/Heading';
 import { LinkButton } from '../components/primitives/LinkButton';
 import { Paragraph } from '../components/primitives/Paragraph';
-import { eduAttendeePricing, proAttendeePricing } from '../utils/price';
 
 const HomePage: NextPage = () => {
+
+	const { error: organizingEventsError, data: organizingEvents } = useOrganizingEvents();
+
 	return (
 		<>
 			<NextSeo
@@ -86,6 +87,21 @@ const HomePage: NextPage = () => {
 
 				<div className="bg-primary-600 text-white">
 					<Column>
+						<Heading level={3} className="mb-3 tracking-normal">
+							Upcoming MeetUps
+						</Heading>
+						<Paragraph className="text-gray-100">
+							MeetUps coming in a few days. Join them now!
+						</Paragraph>
+					</Column>
+				</div>
+
+				<Column>
+					<EventList events={organizingEvents} className="mt-5" />
+				</Column>
+
+				{/* <div className="bg-primary-600 text-white">
+					<Column>
 						<Heading variant="sm" level={6} className="mb-3 text-gray-300">
 							GETTING STARTED
 						</Heading>
@@ -136,65 +152,9 @@ const HomePage: NextPage = () => {
 							</div>
 						</div>
 					</Column>
-				</div>
+				</div> */}
 
-				<Column>
-					<div className="flex flex-col items-center">
-						<Heading variant="sm" level={6} className="mb-3 text-primary">
-							PRICING
-						</Heading>
-						<Heading level={2} variant="3xl" className="mb-3">
-							Transparent Pricing
-						</Heading>
-
-						<Paragraph variant="lg" className="mb-3 max-w-3xl text-center text-gray-600">
-							<span className="font-medium">Evental Pro plans</span> start at{' '}
-							<span className="font-medium">${proAttendeePricing[250].price}</span>, and{' '}
-							<span className="font-medium">Evental Education plans</span> start at{' '}
-							<span className="font-medium">${eduAttendeePricing[250].price}</span>. See the{' '}
-							<Link href="/pricing">
-								<a className="underline">pricing page</a>
-							</Link>{' '}
-							for more information about our one-time and yearly event pricing and features.
-						</Paragraph>
-
-						<div className="relative">
-							<div className="relative mx-auto max-w-full sm:w-full sm:max-w-[1200px]">
-								<div className="absolute top-[30px] h-32 w-full overflow-visible sm:top-[100px]">
-									<div className="bloom small bloom-one left-0" />
-									<div className="bloom small bloom-three left-[34%] top-[150%]" />
-									<div className="bloom small bloom-two right-0" />
-								</div>
-							</div>
-
-							<EventalProCard attendees={250} className="relative">
-								<Link href="/events/create">
-									<LinkButton variant="primary">Start Free Trial</LinkButton>
-								</Link>
-							</EventalProCard>
-						</div>
-					</div>
-				</Column>
-
-				<div className="bg-primary-600">
-					<Column>
-						<div className="flex flex-col items-center text-white">
-							<Heading variant="sm" level={6} className="mb-3 text-gray-200">
-								EVENT MANAGEMENT
-							</Heading>
-							<Heading level={2} variant="3xl" className="mb-3">
-								Transform Your Event
-							</Heading>
-							<Paragraph variant="lg" className="mb-3 max-w-3xl text-center text-gray-200">
-								Use the Evental Organizer dashboard to customize your events branding to fit your
-								organizations needs. You can customize your event color/branding, logo, and more.
-								Set links to your website, social media, and more for all of your attendees to see.
-							</Paragraph>
-						</div>
-					</Column>
-				</div>
-
-				<Column>
+				{/* <Column>
 					<div className="flex flex-col items-center">
 						<Heading variant="sm" level={6} className="mb-3 text-primary">
 							INTERACTIVE FEATURES
@@ -295,7 +255,7 @@ const HomePage: NextPage = () => {
 							</div>
 						</CardGrid>
 					</div>
-				</Column>
+				</Column> */}
 			</PageWrapper>
 			<Footer />
 		</>
