@@ -1,12 +1,11 @@
+import { useOrganizingEvents } from '@eventalapp/shared/hooks/queries/useOrganizingEvents';
+import { EventList } from 'components/events/EventList';
 import type { NextPage } from 'next';
 import { NextSeo } from 'next-seo';
 import Link from 'next/link';
 import React from 'react';
 
-import { EventalProCard } from '../components/billing/EventalProCard';
 import { AspectImage } from '../components/guides/AspectImage';
-import { Card } from '../components/layout/Card';
-import { CardGrid } from '../components/layout/CardGrid';
 import Column from '../components/layout/Column';
 import { Footer } from '../components/layout/Footer';
 import PageWrapper from '../components/layout/PageWrapper';
@@ -14,9 +13,11 @@ import { Navigation } from '../components/navigation';
 import { Heading } from '../components/primitives/Heading';
 import { LinkButton } from '../components/primitives/LinkButton';
 import { Paragraph } from '../components/primitives/Paragraph';
-import { eduAttendeePricing, proAttendeePricing } from '../utils/price';
 
 const HomePage: NextPage = () => {
+
+	const { error: organizingEventsError, data: organizingEvents } = useOrganizingEvents();
+
 	return (
 		<>
 			<NextSeo
@@ -94,6 +95,10 @@ const HomePage: NextPage = () => {
 						</Paragraph>
 					</Column>
 				</div>
+
+				<Column>
+					<EventList events={organizingEvents} className="mt-5" />
+				</Column>
 
 				{/* <div className="bg-primary-600 text-white">
 					<Column>
