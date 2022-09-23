@@ -1,12 +1,15 @@
+import * as Prisma from '@prisma/client';
 import dayjs from 'dayjs';
 import { htmlToText } from 'html-to-text';
-import type { NextPage } from 'next';
+import type { GetServerSidePropsContext, NextPage } from 'next';
 import { NextSeo } from 'next-seo';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { SuccessAPIResponse } from 'nextkit/dist/declarations/src';
 import React from 'react';
 import Skeleton from 'react-loading-skeleton';
 
+import { api } from '@eventalapp/shared/api';
 import {
 	useEvent,
 	useIsOrganizer,
@@ -25,6 +28,28 @@ import { Footer } from '../../../components/layout/Footer';
 import PageWrapper from '../../../components/layout/PageWrapper';
 import Tooltip from '../../../components/primitives/Tooltip';
 import { SessionList } from '../../../components/sessions/SessionList';
+
+export async function getServerSideProps(context: GetServerSidePropsContext) {
+	const eid = context.params?.eid;
+	if (!eid) return;
+
+	let event = await api
+		.get<SuccessAPIResponse<Prisma.Event>>(`/events/${eid}`)
+		.then((res) => res.data.data)
+		.catch(() => null);
+
+	if (event?.externalUrl)
+		return {
+			redirect: {
+				permanent: false,
+				destination: event.externalUrl
+			}
+		};
+
+	return {
+		props: { event }
+	};
+}
 
 const ViewEventPage: NextPage = () => {
 	const router = useRouter();
