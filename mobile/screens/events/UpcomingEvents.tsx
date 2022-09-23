@@ -75,7 +75,7 @@ export const UpcomingEventsScreen = (props: Props) => {
 					onPress={() => navigation.navigate('ViewEvent', { eid: item.slug })}
 				>
 					<Image
-						source={{ uri: `https://cdn.evental.app${item.image}`, width: 52, height: 52 }}
+						source={{ uri: item.image, width: 52, height: 52 }}
 						style={{
 							backgroundColor: '#dedede',
 							borderRadius: 8,

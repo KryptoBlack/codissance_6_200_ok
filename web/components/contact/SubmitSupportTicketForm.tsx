@@ -12,6 +12,7 @@ import { Button } from '../primitives/Button';
 import { Input } from '../primitives/Input';
 import { Label } from '../primitives/Label';
 import Select, { Option } from '../primitives/Select';
+import { baseURL } from '@eventalapp/shared/api';
 
 const attendanceTypes: Option[] = [
 	{ value: 'attending', label: 'Attending' },
@@ -134,7 +135,7 @@ export const SubmitSupportTicketForm = () => {
 				<div className="grid grid-cols-1 gap-6 md:grid-cols-2">
 					<div>
 						<Label htmlFor="website">Website</Label>
-						<Input placeholder="evental.app/events/your-event" {...register('website')} />
+						<Input placeholder={`${baseURL}/events/your-event`} {...register('website')} />
 						{errors.website?.message && <ErrorMessage>{errors.website?.message}</ErrorMessage>}
 					</div>
 

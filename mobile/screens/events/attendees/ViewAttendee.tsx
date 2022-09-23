@@ -81,7 +81,7 @@ export const ViewAttendeeScreen = (props: Props) => {
 						>
 							<Image
 								source={{
-									uri: `https://cdn.evental.app${attendee.user.image}`,
+									uri: attendee.user.image,
 									width: 52,
 									height: 52
 								}}

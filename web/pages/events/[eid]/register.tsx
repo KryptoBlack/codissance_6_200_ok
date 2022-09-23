@@ -40,7 +40,7 @@ const EventRegisterPage: NextPage = () => {
 			additionalLinkTags={[
 				{
 					rel: 'icon',
-					href: `https://cdn.evental.app${event.image}`
+					href: event.image
 				}
 			]}
 			openGraph={{
@@ -55,7 +55,7 @@ const EventRegisterPage: NextPage = () => {
 				)} to ${formatInTimeZone(event.endDate, event.timeZone, 'MMMM do')}.`,
 				images: [
 					{
-						url: `https://cdn.evental.app${event.image}`,
+						url: event.image,
 						width: 300,
 						height: 300,
 						alt: `${event.name} Logo Alt`,

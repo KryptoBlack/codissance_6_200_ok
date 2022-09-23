@@ -17,7 +17,7 @@ export type FileWithPreview = {
 
 export const AvatarUpload: React.FC<Props> = (props) => {
 	const {
-		placeholderImageUrl = 'https://cdn.evental.app/images/default-avatar.jpg',
+		placeholderImageUrl = `https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/default-avatar.jpg`,
 		files,
 		setFiles
 	} = props;

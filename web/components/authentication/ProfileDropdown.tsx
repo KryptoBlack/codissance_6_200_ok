@@ -24,6 +24,8 @@ export const ProfileDropdown = (props: Props) => {
 	const { user } = props;
 	const { mutate: signOut } = useSignOut();
 
+	console.log(user);
+
 	return (
 		<DropdownMenuPrimitive.Root>
 			<DropdownMenuPrimitive.Trigger>
@@ -33,8 +35,8 @@ export const ProfileDropdown = (props: Props) => {
 						layout="fill"
 						src={
 							user?.image
-								? `https://cdn.evental.app${user?.image}`
-								: `https://cdn.evental.app/images/default-avatar.jpg`
+								? `https://meetuppp-assets.s3.ap-south-1.amazonaws.com${user?.image}`
+								: `https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/default-avatar.jpg`
 						}
 						alt={user?.name || ''}
 					/>

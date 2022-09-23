@@ -223,8 +223,8 @@ export const SessionHoverCard: React.FC<Props> = (props) => {
 														alt={String(roleMember.attendee.user.name)}
 														src={String(
 															roleMember.attendee?.user.image
-																? `https://cdn.evental.app${roleMember.attendee?.user.image}`
-																: `https://cdn.evental.app/images/default-avatar.jpg`
+																? roleMember.attendee?.user.image
+																: `https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/default-avatar.jpg`
 														)}
 														className="rounded-md"
 														layout="fill"

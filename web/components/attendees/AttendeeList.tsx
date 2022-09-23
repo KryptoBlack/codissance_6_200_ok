@@ -73,8 +73,8 @@ export const AttendeeList: React.FC<Props> = (props) => {
 															alt={String(attendee.user.name)}
 															imageUrl={String(
 																attendee?.user.image
-																	? `https://cdn.evental.app${attendee?.user.image}`
-																	: `https://cdn.evental.app/images/default-avatar.jpg`
+																	? attendee?.user.image
+																	: `https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/default-avatar.jpg`
 															)}
 															className="border border-gray-200 shadow-sm"
 														/>

@@ -41,7 +41,7 @@ const ViewAttendeePage: NextPage = () => {
 			additionalLinkTags={[
 				{
 					rel: 'icon',
-					href: `https://cdn.evental.app${event.image}`
+					href: event.image
 				}
 			]}
 			openGraph={{
@@ -50,7 +50,7 @@ const ViewAttendeePage: NextPage = () => {
 				description: `View the ${page.name} page for ${event.name}.`,
 				images: [
 					{
-						url: `https://cdn.evental.app${event.image}`,
+						url: event.image,
 						width: 300,
 						height: 300,
 						alt: `${event.name} Logo Alt`,
