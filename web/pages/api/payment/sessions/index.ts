@@ -10,6 +10,7 @@ import { api } from '../../../../utils/api';
 import { proAttendeePricing, sale } from '../../../../utils/price';
 import { formatAmountForStripe } from '../../../../utils/stripe';
 import { getEvent } from '../../events/[eid]';
+import { baseURL } from '../../../../../shared/api';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
 	// https://github.com/stripe/stripe-node#configuration
@@ -77,12 +78,10 @@ export default api({
 		const params: Stripe.Checkout.SessionCreateParams = {
 			payment_method_types: ['card'],
 			mode: 'payment',
-			success_url: `https://${process.env.NEXT_PUBLIC_VERCEL_URL ?? 'evental.app'}/events/${
-				body.eventId
-			}/admin`,
-			cancel_url: `https://${process.env.NEXT_PUBLIC_VERCEL_URL ?? 'evental.app'}/events/${
-				body.eventId
-			}/admin/billing`,
+			success_url: `${baseURL}/events/${body.eventId
+				}/admin`,
+			cancel_url: `${baseURL}/events/${body.eventId
+				}/admin/billing`,
 			metadata: {
 				eventId: body.eventId,
 				level: product.level,

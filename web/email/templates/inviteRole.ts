@@ -3,6 +3,7 @@ import { SESV2 } from 'aws-sdk';
 import { convert } from 'html-to-text';
 import mjml2html from 'mjml';
 import { NextkitError } from 'nextkit';
+import { baseURL } from '../../../shared/api';
 
 import { sendEmail } from '../../utils/email';
 import { GenerateTemplateArgs } from '../generateTemplates';
@@ -79,17 +80,15 @@ export const sendRoleInvite = async (args: SendInviteRoleArgs) => {
 	}
 
 	const templateData: InviteRoleTemplateArgs = {
-		inviteLink: `https://${
-			process.env.NEXT_PUBLIC_VERCEL_URL ?? 'evental.app'
-		}/invites/role?code=${inviteCode}`,
+		inviteLink: `${baseURL}/invites/role?code=${inviteCode}`,
 		eventName: event.name,
 		inviterName,
 		roleName: role.name
 	};
 
 	const params: SESV2.SendEmailRequest = {
-		FromEmailAddress: `"Evental" <notifications@evental.app>`,
-		ReplyToAddresses: ['"Evental Support" <support@evental.app>'],
+		FromEmailAddress: `"Meetuppp" <patrick.thakare123@gmail.com>`,
+		ReplyToAddresses: ['"Meetuppp" <patrick.thakare123@gmail.com>'],
 		Destination: {
 			ToAddresses: toAddresses
 		},

@@ -9,7 +9,7 @@ import { sendEmail } from '../../utils/email';
 import { GenerateTemplateArgs } from '../generateTemplates';
 
 type WelcomeTemplateArgs = {
-	name: string;
+  name: string;
 };
 
 export const template = `
@@ -60,47 +60,47 @@ export const template = `
 const htmlOutput = mjml2html(template);
 
 const text = convert(htmlOutput.html, {
-	wordwrap: 130
+  wordwrap: 130
 });
 
 export const welcome: GenerateTemplateArgs = {
-	textPart: text,
-	htmlPart: htmlOutput.html,
-	subjectPart: 'Welcome to Evental!',
-	templateName: 'Welcome'
+  textPart: text,
+  htmlPart: htmlOutput.html,
+  subjectPart: 'Welcome to Evental!',
+  templateName: 'Welcome'
 };
 
 type SendWelcomeArgs = {
-	toAddresses: string[];
-	user: StrippedUser;
+  toAddresses: string[];
+  user: StrippedUser;
 };
 
 export const sendWelcome = async (args: SendWelcomeArgs) => {
-	const { user, toAddresses } = args;
+  const { user, toAddresses } = args;
 
-	if (toAddresses.length === 0) {
-		throw new NextkitError(400, 'No recipients specified');
-	}
+  if (toAddresses.length === 0) {
+    throw new NextkitError(400, 'No recipients specified');
+  }
 
-	const templateData: WelcomeTemplateArgs = {
-		name: user.name
-	};
+  const templateData: WelcomeTemplateArgs = {
+    name: user.name
+  };
 
-	const params: SESV2.SendEmailRequest = {
-		FromEmailAddress: `"Evental" <notifications@evental.app>`,
-		ReplyToAddresses: ['"Evental Support" <support@evental.app>'],
-		Destination: {
-			ToAddresses: toAddresses
-		},
-		Content: {
-			Template: {
-				TemplateData: JSON.stringify(templateData),
-				TemplateName: welcome.templateName
-			}
-		}
-	};
+  const params: SESV2.SendEmailRequest = {
+    FromEmailAddress: `"Meetuppp" <patrick.thakare123@gmail.com>`,
+    ReplyToAddresses: ['"Meetuppp" <patrick.thakare123@gmail.com>'],
+    Destination: {
+      ToAddresses: toAddresses
+    },
+    Content: {
+      Template: {
+        TemplateData: JSON.stringify(templateData),
+        TemplateName: welcome.templateName
+      }
+    }
+  };
 
-	await sendEmail(params).catch((err) => {
-		throw new NextkitError(500, err);
-	});
+  await sendEmail(params).catch((err) => {
+    throw new NextkitError(500, err);
+  });
 };

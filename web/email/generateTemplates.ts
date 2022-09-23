@@ -9,6 +9,8 @@ import { sales } from './templates/sales';
 import { verifyEmail } from './templates/verifyEmail';
 import { welcome } from './templates/welcome';
 
+// import { SES } from '../utils/client';
+
 export type GenerateTemplateArgs = {
 	templateName: string;
 	subjectPart: string;
@@ -47,7 +49,7 @@ export const generateTemplates = (args: GenerateTemplateArgs) => {
 	});
 
 	const operation = `{
-		"Source": "notifications@evental.app",
+		"Source": "patrick.thakare123@gmail.com",
 		"Template": ${JSON.stringify(templateName)},
 		"Destination": {
 			"ToAddresses": [ "email@gmail.com" ]
@@ -56,6 +58,18 @@ export const generateTemplates = (args: GenerateTemplateArgs) => {
   }`;
 
 	fs.writeFileSync(`./email/output/${templateName}/operation.json`, operation);
+
+	// SES.createEmailTemplate({
+	// 	TemplateContent: { /* required */
+	// 		Html: htmlPart,
+	// 		Subject: subjectPart,
+	// 		Text: textPart
+	// 	},
+	// 	TemplateName: templateName /* required */
+	// }, function (err, data) {
+	// 	if (err) console.log(err, err.stack); // an error occurred
+	// 	else console.log(data);           // successful response
+	// });
 };
 
 const templatesToGenerate = [

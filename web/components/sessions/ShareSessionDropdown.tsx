@@ -8,6 +8,8 @@ import React from 'react';
 
 import { emailLink, facebookLink, linkedinLink, twitterLink } from '@eventalapp/shared/utils';
 
+import { baseURL } from '../../../shared/api';
+
 interface Props {
 	event: Prisma.Event;
 	session: Prisma.EventSession;
@@ -32,17 +34,12 @@ export const ShareSessionDropdown: React.FC<Props> = (props) => {
 					)}
 				>
 					<a
-						href={twitterLink(
-							`https://${process.env.NEXT_PUBLIC_VERCEL_URL ?? 'evental.app'}/events/${
-								event.slug
-							}/sessions/${session.slug}`,
-							{
-								title: `Checkout ${session.name} at ${event.name} on Evental!`,
-								hashtags: ['evental', 'eventalapp'],
-								via: 'eventaldotapp',
-								related: ['eventalapp', 'eventalapp.com']
-							}
-						)}
+						href={twitterLink(`${baseURL}/events/${event.slug}/sessions/${session.slug}`, {
+							title: `Checkout ${session.name} at ${event.name} on Evental!`,
+							hashtags: ['evental', 'eventalapp'],
+							via: 'eventaldotapp',
+							related: ['eventalapp', 'eventalapp.com']
+						})}
 						target="_blank"
 						rel="noopener noreferrer"
 					>
@@ -62,15 +59,10 @@ export const ShareSessionDropdown: React.FC<Props> = (props) => {
 						</DropdownMenuPrimitive.Item>
 					</a>
 					<a
-						href={facebookLink(
-							`https://${process.env.NEXT_PUBLIC_VERCEL_URL ?? 'evental.app'}/events/${
-								event.slug
-							}/sessions/${session.slug}`,
-							{
-								quote: `Checkout ${session.name} at ${event.name} on Evental!`,
-								hashtag: 'evental'
-							}
-						)}
+						href={facebookLink(`${baseURL}/events/${event.slug}/sessions/${session.slug}`, {
+							quote: `Checkout ${session.name} at ${event.name} on Evental!`,
+							hashtag: 'evental'
+						})}
 						target="_blank"
 						rel="noopener noreferrer"
 					>
@@ -91,16 +83,11 @@ export const ShareSessionDropdown: React.FC<Props> = (props) => {
 					</a>
 
 					<a
-						href={linkedinLink(
-							`https://${process.env.NEXT_PUBLIC_VERCEL_URL ?? 'evental.app'}/events/${
-								event.slug
-							}/sessions/${session.slug}`,
-							{
-								source: 'Evental',
-								title: `Checkout ${session.name} at ${event.name} on Evental!`,
-								summary: `Checkout ${session.name} at ${event.name} on Evental!`
-							}
-						)}
+						href={linkedinLink(`${baseURL}/events/${event.slug}/sessions/${session.slug}`, {
+							source: 'Evental',
+							title: `Checkout ${session.name} at ${event.name} on Evental!`,
+							summary: `Checkout ${session.name} at ${event.name} on Evental!`
+						})}
 						target="_blank"
 						rel="noopener noreferrer"
 					>
@@ -120,16 +107,11 @@ export const ShareSessionDropdown: React.FC<Props> = (props) => {
 						</DropdownMenuPrimitive.Item>
 					</a>
 					<a
-						href={emailLink(
-							`https://${process.env.NEXT_PUBLIC_VERCEL_URL ?? 'evental.app'}/events/${
-								event.slug
-							}/sessions/${session.slug}`,
-							{
-								body: `Join me in attending ${session.name} at ${event.name} on Evental!`,
-								separator: '\n',
-								subject: `Checkout ${session.name} at ${event.name} on Evental!`
-							}
-						)}
+						href={emailLink(`${baseURL}/events/${event.slug}/sessions/${session.slug}`, {
+							body: `Join me in attending ${session.name} at ${event.name} on Evental!`,
+							separator: '\n',
+							subject: `Checkout ${session.name} at ${event.name} on Evental!`
+						})}
 						target="_blank"
 						rel="noopener noreferrer"
 					>

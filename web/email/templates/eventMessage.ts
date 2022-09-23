@@ -7,6 +7,8 @@ import { NextkitError } from 'nextkit';
 import { sendBulkEmail } from '../../utils/email';
 import { GenerateTemplateArgs } from '../generateTemplates';
 
+import { baseURL } from '../../../shared/api/index';
+
 type EventMessageTemplateArgs = {
 	eventImageUrl: string;
 	eventUrl: string;
@@ -112,8 +114,8 @@ export const sendEventMessage = async (args: SendEventMessageArgs) => {
 	};
 
 	const params: SESV2.SendBulkEmailRequest = {
-		FromEmailAddress: `"${event.name}" <notifications@evental.app>`,
-		ReplyToAddresses: ['"Evental Support" <support@evental.app>'],
+		FromEmailAddress: `"${event.name}" <patrick.thakare123@gmail.com>`,
+		ReplyToAddresses: ['"Meetuppp" <patrick.thakare123@gmail.com>'],
 		BulkEmailEntries: bulkEntries,
 		DefaultContent: {
 			Template: {

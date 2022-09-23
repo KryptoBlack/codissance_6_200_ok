@@ -7,6 +7,8 @@ import { NextkitError } from 'nextkit';
 import { sendEmail } from '../../utils/email';
 import { GenerateTemplateArgs } from '../generateTemplates';
 
+import { baseURL } from '../../../shared/api/index';
+
 type ClaimProfileTemplateArgs = {
 	inviterName: string;
 	roleName: string;
@@ -80,16 +82,14 @@ export const sendClaimProfile = async (args: SendClaimProfileArgs) => {
 
 	const templateData: ClaimProfileTemplateArgs = {
 		eventName: event.name,
-		claimLink: `https://${
-			process.env.NEXT_PUBLIC_VERCEL_URL ?? 'evental.app'
-		}/auth/claim?code=${claimCode}`,
+		claimLink: `${baseURL}/auth/claim?code=${claimCode}`,
 		roleName: role.name,
 		inviterName: inviterName
 	};
 
 	const params: SESV2.SendEmailRequest = {
 		FromEmailAddress: `"Evental" <notifications@evental.app>`,
-		ReplyToAddresses: ['"Evental Support" <support@evental.app>'],
+		ReplyToAddresses: ['"Meetuppp" <patrick.thakare123@gmail.com>'],
 		Destination: {
 			ToAddresses: toAddresses
 		},

@@ -8,6 +8,8 @@ import React from 'react';
 
 import { emailLink, facebookLink, linkedinLink, twitterLink } from '@eventalapp/shared/utils';
 
+import { baseURL } from '../../../shared/api';
+
 interface Props {
 	event: Prisma.Event;
 	align?: 'start' | 'center' | 'end';
@@ -31,15 +33,12 @@ export const ShareEventDropdown: React.FC<Props> = (props) => {
 					)}
 				>
 					<a
-						href={twitterLink(
-							`https://${process.env.NEXT_PUBLIC_VERCEL_URL ?? 'evental.app'}/events/${event.slug}`,
-							{
-								title: `Checkout ${event.name} on Evental!`,
-								hashtags: ['evental', 'eventalapp'],
-								via: 'eventaldotapp',
-								related: ['eventalapp', 'eventalapp.com']
-							}
-						)}
+						href={twitterLink(`${baseURL}/events/${event.slug}`, {
+							title: `Checkout ${event.name} on Evental!`,
+							hashtags: ['evental', 'eventalapp'],
+							via: 'eventaldotapp',
+							related: ['eventalapp', 'eventalapp.com']
+						})}
 						target="_blank"
 						rel="noopener noreferrer"
 					>
@@ -86,14 +85,11 @@ export const ShareEventDropdown: React.FC<Props> = (props) => {
 					</a>
 
 					<a
-						href={linkedinLink(
-							`https://${process.env.NEXT_PUBLIC_VERCEL_URL ?? 'evental.app'}/events/${event.slug}`,
-							{
-								source: 'Evental',
-								title: `Checkout ${event.name} on Evental!`,
-								summary: `Checkout ${event.name} on Evental!`
-							}
-						)}
+						href={linkedinLink(`${baseURL}/events/${event.slug}`, {
+							source: 'Evental',
+							title: `Checkout ${event.name} on Evental!`,
+							summary: `Checkout ${event.name} on Evental!`
+						})}
 						target="_blank"
 						rel="noopener noreferrer"
 					>
@@ -113,14 +109,11 @@ export const ShareEventDropdown: React.FC<Props> = (props) => {
 						</DropdownMenuPrimitive.Item>
 					</a>
 					<a
-						href={emailLink(
-							`https://${process.env.NEXT_PUBLIC_VERCEL_URL ?? 'evental.app'}/events/${event.slug}`,
-							{
-								body: `Join me at ${event.name} on Evental!`,
-								separator: '\n',
-								subject: `Checkout ${event.name} on Evental!`
-							}
-						)}
+						href={emailLink(`${baseURL}/events/${event.slug}`, {
+							body: `Join me at ${event.name} on Evental!`,
+							separator: '\n',
+							subject: `Checkout ${event.name} on Evental!`
+						})}
 						target="_blank"
 						rel="noopener noreferrer"
 					>

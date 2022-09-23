@@ -2,6 +2,7 @@ import { SESV2 } from 'aws-sdk';
 import { convert } from 'html-to-text';
 import mjml2html from 'mjml';
 import { NextkitError } from 'nextkit';
+import { baseURL } from '../../../shared/api';
 
 import { sendEmail } from '../../utils/email';
 import { GenerateTemplateArgs } from '../generateTemplates';
@@ -76,14 +77,12 @@ export const sendVerifyEmail = async (args: SendVerifyEmailArgs) => {
 	}
 
 	const templateData: VerifyEmailTemplateArgs = {
-		verifyLink: `https://${
-			process.env.NEXT_PUBLIC_VERCEL_URL ?? 'evental.app'
-		}/auth/verify?code=${verifyCode}`
+		verifyLink: `${baseURL}/auth/verify?code=${verifyCode}`
 	};
 
 	const params: SESV2.SendEmailRequest = {
-		FromEmailAddress: `"Evental" <notifications@evental.app>`,
-		ReplyToAddresses: ['"Evental Support" <support@evental.app>'],
+		FromEmailAddress: `"Meetuppp" <patrick.thakare123@gmail.com>`,
+		ReplyToAddresses: ['"Meetuppp" <patrick.thakare123@gmail.com>'],
 		Destination: {
 			ToAddresses: toAddresses
 		},

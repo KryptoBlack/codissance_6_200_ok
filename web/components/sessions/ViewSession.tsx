@@ -23,6 +23,7 @@ import {
 } from '@eventalapp/shared/utils';
 import { faCalendarCirclePlus } from '@eventalapp/shared/utils/icons';
 
+import { baseURL } from '../../../shared/api';
 import { useCreateSessionAttendee } from '../../hooks/mutations/useCreateSessionAttendee';
 import { AttendeeList, attendeeListSkeleton } from '../attendees/AttendeeList';
 import { FlexRowBetween } from '../layout/FlexRowBetween';
@@ -106,9 +107,7 @@ export const ViewSession: React.FC<Props> = (props) => {
 								location: session?.venue?.address || event.location || session?.venue?.name,
 								end: new Date(session.endDate).toISOString(),
 								start: new Date(session.startDate).toISOString(),
-								url: `https://${
-									process.env.NEXT_PUBLIC_VERCEL_URL ?? 'evental.app'
-								}/events/${eid}/sessions/${sid}`,
+								url: `${baseURL}/events/${eid}/sessions/${sid}`,
 								guests: attendees?.map((attendee) => attendee.user.name) ?? undefined
 							}}
 						/>

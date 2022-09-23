@@ -7,6 +7,8 @@ import { NextkitError } from 'nextkit';
 import { sendEmail } from '../../utils/email';
 import { GenerateTemplateArgs } from '../generateTemplates';
 
+import { baseURL } from '../../../shared/api/index';
+
 type InviteOrganizerTemplateArgs = {
 	inviteLink: string;
 	inviterName: string;
@@ -77,16 +79,14 @@ export const sendOrganizerInvite = async (args: SendInviteOrganizerArgs) => {
 	}
 
 	const templateData: InviteOrganizerTemplateArgs = {
-		inviteLink: `https://${
-			process.env.NEXT_PUBLIC_VERCEL_URL ?? 'evental.app'
-		}/invites/organizer?code=${inviteCode}`,
+		inviteLink: `${baseURL}/invites/organizer?code=${inviteCode}`,
 		eventName: event.name,
 		inviterName
 	};
 
 	const params: SESV2.SendEmailRequest = {
-		FromEmailAddress: `"Evental" <notifications@evental.app>`,
-		ReplyToAddresses: ['"Evental Support" <support@evental.app>'],
+		FromEmailAddress: `"Meetuppp" <patrick.thakare123@gmail.com>`,
+		ReplyToAddresses: ['"Meetuppp" <patrick.thakare123@gmail.com>'],
 		Destination: {
 			ToAddresses: toAddresses
 		},
