@@ -6,6 +6,9 @@
 		"web",
 		"shared"
 	],
+	"prisma": {
+		"schema": "./shared/db/prisma/schema.prisma"
+	},
 	"scripts": {
 		"prepare": "yarn shared generate",
 		"web": "dotenv -e ./shared/.env -- yarn workspace @eventalapp/web",
