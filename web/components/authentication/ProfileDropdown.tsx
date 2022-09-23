@@ -35,7 +35,7 @@ export const ProfileDropdown = (props: Props) => {
 						layout="fill"
 						src={
 							user?.image
-								? `https://meetuppp-assets.s3.ap-south-1.amazonaws.com${user?.image}`
+								? user?.image
 								: `https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/default-avatar.jpg`
 						}
 						alt={user?.name || ''}
