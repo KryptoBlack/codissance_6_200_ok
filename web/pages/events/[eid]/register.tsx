@@ -29,7 +29,7 @@ const EventRegisterPage: NextPage = () => {
 
 	const Seo = event && (
 		<NextSeo
-			title={`Register for ${event.name} — Evental`}
+			title={`Register for ${event.name} — Meetuppp`}
 			description={`Fill out the form below to register for ${
 				event.name
 			} taking place from ${formatInTimeZone(
@@ -45,7 +45,7 @@ const EventRegisterPage: NextPage = () => {
 			]}
 			openGraph={{
 				url: `https://evental.app/events/${event.slug}/register`,
-				title: `Register for ${event.name} — Evental`,
+				title: `Register for ${event.name} — Meetuppp`,
 				description: `Fill out the form below to register for ${
 					event.name
 				} taking place from ${formatInTimeZone(

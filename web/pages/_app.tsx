@@ -79,17 +79,17 @@ const App: React.FC<AppProps & { error?: Error }> = (props) => {
 					openGraph={{
 						type: 'website',
 						locale: 'en_IE',
-						url: 'https://evental.app',
-						site_name: 'Evental — Event management software from the future',
+						url: 'http://localhost:5555',
+						site_name: 'Meetuppp — Event management software from the future',
 						description:
-							"Event management software that's highly intuitive. Your attendees and organizers will love using Evental for your in-person, hybrid, and virtual events.",
+							"Event management software that's highly intuitive. Your attendees and organizers will love using Meetuppp for your in-person, hybrid, and virtual events.",
 						images: [
 							{
-								url: 'https://cdn.evental.app/images/logo.jpg',
+								url: 'https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/logo.png',
 								width: 389,
 								height: 389,
-								alt: 'Evental Logo Alt',
-								type: 'image/jpeg'
+								alt: 'Meetuppp Logo Alt',
+								type: 'image/png'
 							}
 						]
 					}}

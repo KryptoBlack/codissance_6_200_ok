@@ -10,7 +10,7 @@ export const EventalPro: React.FC<EventalProProps> = (props) => {
 
 	return (
 		<div className="flex flex-row items-center">
-			<strong className="mr-2 font-display text-2xl font-bold tracking-tight">Evental</strong>
+			<strong className="mr-2 font-display text-2xl font-bold tracking-tight">Meetuppp</strong>
 			<span className="rounded bg-primary py-1 px-2 text-xs font-medium text-white">
 				{isEducation ? 'EDU' : 'PRO'}
 			</span>

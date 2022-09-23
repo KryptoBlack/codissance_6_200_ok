@@ -30,18 +30,18 @@ const EditingASessionGuidePage: NextPage = () => {
 
 			<PageWrapper>
 				<NextSeo
-					title="Editing a venue — Evental"
-					description={`Learn how to edit a venue for your event on Evental.`}
+					title="Editing a venue — Meetuppp"
+					description={`Learn how to edit a venue for your event on Meetuppp.`}
 					openGraph={{
 						url: 'https://evental.app/guides/venue/editing-a-venue',
-						title: 'Editing a venue — Evental',
-						description: `Learn how to edit a venue for your event on Evental.`,
+						title: 'Editing a venue — Meetuppp',
+						description: `Learn how to edit a venue for your event on Meetuppp.`,
 						images: [
 							{
 								url: 'https://cdn.evental.app/images/logo.jpg',
 								width: 389,
 								height: 389,
-								alt: 'Evental Logo Alt',
+								alt: 'Meetuppp Logo Alt',
 								type: 'image/jpeg'
 							}
 						]
@@ -52,7 +52,7 @@ const EditingASessionGuidePage: NextPage = () => {
 					<Column className="flex flex-col items-center">
 						<Heading>Editing a venue</Heading>
 						<p className="mt-4 text-base text-gray-100">
-							Learn how to edit a venue for your event on Evental.
+							Learn how to edit a venue for your event on Meetuppp.
 						</p>
 					</Column>
 				</div>

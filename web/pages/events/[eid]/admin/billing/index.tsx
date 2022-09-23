@@ -57,7 +57,7 @@ const EventBillingPage: NextPage = () => {
 
 										<div className="ml-2 flex flex-row items-center">
 											<strong className="mr-2 font-display text-2xl font-bold tracking-tight">
-												Evental
+												Meetuppp
 											</strong>
 											<span className="rounded bg-primary py-1 px-2 text-xs font-medium text-white">
 												PRO

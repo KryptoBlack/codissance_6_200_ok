@@ -12,18 +12,18 @@ const PricingPage: NextPage = () => {
 	return (
 		<>
 			<NextSeo
-				title="Convention — Evental"
-				description={`See why Evental is perfect for your next convention event.`}
+				title="Convention — Meetuppp"
+				description={`See why Meetuppp is perfect for your next convention event.`}
 				openGraph={{
 					url: 'https://evental.app/pricing',
-					title: 'Convention — Evental',
-					description: `See why Evental is perfect for your next convention event.`,
+					title: 'Convention — Meetuppp',
+					description: `See why Meetuppp is perfect for your next convention event.`,
 					images: [
 						{
 							url: 'https://cdn.evental.app/images/logo.jpg',
 							width: 389,
 							height: 389,
-							alt: 'Evental Logo Alt',
+							alt: 'Meetuppp Logo Alt',
 							type: 'image/jpeg'
 						}
 					]
@@ -33,9 +33,9 @@ const PricingPage: NextPage = () => {
 
 			<PageWrapper>
 				<Column className="flex flex-col items-center">
-					<Heading>Convention Events with Evental</Heading>
+					<Heading>Convention Events with Meetuppp</Heading>
 					<p className="mt-4 text-base text-gray-600">
-						See why Evental is perfect for your next convention event.
+						See why Meetuppp is perfect for your next convention event.
 					</p>
 				</Column>
 			</PageWrapper>

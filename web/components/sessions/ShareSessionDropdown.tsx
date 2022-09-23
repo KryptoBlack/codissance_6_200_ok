@@ -35,7 +35,7 @@ export const ShareSessionDropdown: React.FC<Props> = (props) => {
 				>
 					<a
 						href={twitterLink(`${baseURL}/events/${event.slug}/sessions/${session.slug}`, {
-							title: `Checkout ${session.name} at ${event.name} on Evental!`,
+							title: `Checkout ${session.name} at ${event.name} on Meetuppp!`,
 							hashtags: ['evental', 'eventalapp'],
 							via: 'eventaldotapp',
 							related: ['eventalapp', 'eventalapp.com']
@@ -60,7 +60,7 @@ export const ShareSessionDropdown: React.FC<Props> = (props) => {
 					</a>
 					<a
 						href={facebookLink(`${baseURL}/events/${event.slug}/sessions/${session.slug}`, {
-							quote: `Checkout ${session.name} at ${event.name} on Evental!`,
+							quote: `Checkout ${session.name} at ${event.name} on Meetuppp!`,
 							hashtag: 'evental'
 						})}
 						target="_blank"
@@ -84,9 +84,9 @@ export const ShareSessionDropdown: React.FC<Props> = (props) => {
 
 					<a
 						href={linkedinLink(`${baseURL}/events/${event.slug}/sessions/${session.slug}`, {
-							source: 'Evental',
-							title: `Checkout ${session.name} at ${event.name} on Evental!`,
-							summary: `Checkout ${session.name} at ${event.name} on Evental!`
+							source: 'Meetuppp',
+							title: `Checkout ${session.name} at ${event.name} on Meetuppp!`,
+							summary: `Checkout ${session.name} at ${event.name} on Meetuppp!`
 						})}
 						target="_blank"
 						rel="noopener noreferrer"
@@ -108,9 +108,9 @@ export const ShareSessionDropdown: React.FC<Props> = (props) => {
 					</a>
 					<a
 						href={emailLink(`${baseURL}/events/${event.slug}/sessions/${session.slug}`, {
-							body: `Join me in attending ${session.name} at ${event.name} on Evental!`,
+							body: `Join me in attending ${session.name} at ${event.name} on Meetuppp!`,
 							separator: '\n',
-							subject: `Checkout ${session.name} at ${event.name} on Evental!`
+							subject: `Checkout ${session.name} at ${event.name} on Meetuppp!`
 						})}
 						target="_blank"
 						rel="noopener noreferrer"

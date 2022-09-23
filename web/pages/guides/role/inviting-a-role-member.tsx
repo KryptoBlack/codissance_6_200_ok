@@ -31,18 +31,18 @@ const InvitingRoleMemberGuidePage: NextPage = () => {
 
 			<PageWrapper>
 				<NextSeo
-					title="Inviting a role member — Evental"
-					description={`Learn how to invite a role member to your event on Evental.`}
+					title="Inviting a role member — Meetuppp"
+					description={`Learn how to invite a role member to your event on Meetuppp.`}
 					openGraph={{
 						url: 'https://evental.app/guides/role/inviting-a-role-member',
-						title: 'Inviting a role member — Evental',
-						description: `Learn how to invite a role member to your event on Evental.`,
+						title: 'Inviting a role member — Meetuppp',
+						description: `Learn how to invite a role member to your event on Meetuppp.`,
 						images: [
 							{
 								url: 'https://cdn.evental.app/images/logo.jpg',
 								width: 389,
 								height: 389,
-								alt: 'Evental Logo Alt',
+								alt: 'Meetuppp Logo Alt',
 								type: 'image/jpeg'
 							}
 						]
@@ -53,7 +53,7 @@ const InvitingRoleMemberGuidePage: NextPage = () => {
 					<Column className="flex flex-col items-center">
 						<Heading>Inviting a role member</Heading>
 						<p className="mt-4 text-base text-gray-100">
-							Learn how to invite a role member to your event on Evental
+							Learn how to invite a role member to your event on Meetuppp
 						</p>
 					</Column>
 				</div>

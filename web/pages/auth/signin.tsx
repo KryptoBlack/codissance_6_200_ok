@@ -29,19 +29,19 @@ const SignInPage: NextPage = () => {
 	return (
 		<PageWrapper>
 			<NextSeo
-				title="Sign In — Evental"
-				description="Sign into your Evental account. Create, organize, or attend events with ease."
+				title="Sign In — Meetuppp"
+				description="Sign into your Meetuppp account. Create, organize, or attend events with ease."
 				openGraph={{
 					url: 'https://evental.app/auth/signin',
-					title: 'Sign In — Evental',
+					title: 'Sign In — Meetuppp',
 					description:
-						'Sign into your Evental account. Create, organize, or attend events with ease.',
+						'Sign into your Meetuppp account. Create, organize, or attend events with ease.',
 					images: [
 						{
 							url: 'https://cdn.evental.app/images/logo.jpg',
 							width: 389,
 							height: 389,
-							alt: 'Evental Logo Alt',
+							alt: 'Meetuppp Logo Alt',
 							type: 'image/jpeg'
 						}
 					]

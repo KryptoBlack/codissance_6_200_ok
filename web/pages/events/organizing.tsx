@@ -31,7 +31,7 @@ const OrganizingEventsPage: NextPage = () => {
 
 	const Seo = (
 		<NextSeo
-			title="Organizing Events — Evental"
+			title="Organizing Events — Meetuppp"
 			description="View all of the events you are organizing."
 			openGraph={{
 				url: 'https://evental.app/events/organizing',
@@ -42,7 +42,7 @@ const OrganizingEventsPage: NextPage = () => {
 						url: 'https://cdn.evental.app/images/logo.jpg',
 						width: 389,
 						height: 389,
-						alt: 'Evental Logo Alt',
+						alt: 'Meetuppp Logo Alt',
 						type: 'image/jpeg'
 					}
 				]
