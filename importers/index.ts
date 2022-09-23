@@ -1,10 +1,13 @@
 import type { Prisma } from '@prisma/client';
 import dayjs from 'dayjs';
+import timezone from 'dayjs/plugin/timezone';
 
-import { prisma } from '@eventalapp/shared/db';
+import { prisma } from '@eventalapp/shared/db/client';
 import { generateSlug } from '@eventalapp/shared/utils';
 
 import { fetchAllEvents, fetchAllGroups } from './bylde';
+
+dayjs.extend(timezone);
 
 async function createEvent(eventData: Prisma.EventCreateInput) {
 	const slug = await generateSlug(eventData.name, async (val) => {

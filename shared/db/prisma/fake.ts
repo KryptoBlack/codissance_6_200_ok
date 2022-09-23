@@ -56,7 +56,8 @@ export const fake = (count: number) => {
 		address: faker.address.streetAddress(),
 		banner: faker.image.avatar(),
 		level: 'PRO',
-		timeFormat: 'TWELVE_HOURS'
+		timeFormat: 'TWELVE_HOURS',
+		externalUrl: null
 	};
 
 	// Fake roles

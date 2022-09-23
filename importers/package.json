@@ -3,7 +3,11 @@
 	"version": "0.0.1",
 	"private": true,
 	"main": "index.js",
+	"scripts": {
+		"pull": "dotenv -e ../shared/.env ts-node index.ts"
+	},
 	"dependencies": {
+		"dayjs": "^1.11.2",
 		"node-fetch": "^2.6.7"
 	},
 	"devDependencies": {
