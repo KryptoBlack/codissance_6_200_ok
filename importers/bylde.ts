@@ -6,7 +6,7 @@ const BYLDE_BASE_URL = 'https://www.bylde.com';
 
 const apiRequest = apiRequestGenerator(BYLDE_BASE_URL);
 
-export async function fetchAllGroups(): Promise<any> {
+export async function fetchAllGroups(): Promise<any[]> {
 	let groupsData: any[] = [];
 	for (let i = 0; ; i++) {
 		let { results } = await apiRequest('groups/api/v1', {

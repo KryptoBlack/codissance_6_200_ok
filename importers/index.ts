@@ -6,27 +6,28 @@ import utc from 'dayjs/plugin/utc';
 import { prisma } from '@eventalapp/shared/db/client';
 import { processSlug } from '@eventalapp/shared/utils';
 
-import { fetchAllEvents, fetchAllGroups } from './bylde';
+import { fetchAllEvents, fetchAllGroups } from './townscript';
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
 
 async function createEvents(eventsData: Prisma.EventCreateInput[]) {
 	let slugs = eventsData.map(({ name }) => processSlug(name));
-	let slugUniqueness = await Promise.all(
-		slugs.map(async (slug) => !Boolean(await prisma.event.findFirst({ where: { slug } })))
-	);
-
-	return prisma.event.createMany({
-		data: eventsData
-			.filter((_, index) => slugUniqueness[index])
-			.map(({ startDate, endDate, timeZone, createdAt, ...otherEventData }, index) => ({
+	let createManyData = [];
+	for (let i = 0; i < eventsData.length; i++)
+		if (!(await prisma.event.findFirst({ where: { slug: slugs[i] } }))) {
+			let { startDate, endDate, timeZone, createdAt, ...otherEventData } = eventsData[i];
+			createManyData.push({
 				...otherEventData,
-				slug: slugs[index],
+				slug: slugs[i],
 				startDate: dayjs(startDate).tz(timeZone).startOf('day').toDate(),
 				endDate: dayjs(endDate).tz(timeZone).endOf('day').toDate(),
 				createdAt: dayjs(createdAt).toDate()
-			}))
+			});
+		}
+
+	return prisma.event.createMany({
+		data: createManyData
 	});
 }
 
