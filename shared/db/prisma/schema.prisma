@@ -1,0 +1,286 @@
+datasource db {
+  provider             = "mysql"
+  url                  = env("DATABASE_URL")
+  referentialIntegrity = "prisma"
+}
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["referentialIntegrity"]
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+model User {
+  id            String    @id @default(cuid())
+  slug          String    @unique
+  name          String
+  password      String?
+  email         String?   @unique
+  emailVerified DateTime?
+  location      String?
+  description   String?   @db.VarChar(5000)
+  company       String?
+  position      String?
+  website       String?
+
+  image     String    @default("/images/default-avatar.jpg")
+  updatedAt DateTime  @updatedAt
+  createdAt DateTime  @default(now())
+  claimedAt DateTime?
+  role      Role      @default(USER)
+
+  eventAttendee          EventAttendee[]
+  notificationPreference NotificationPreference[]
+
+  @@map("user")
+}
+
+model NotificationPreference {
+  id     String @id @default(cuid())
+  userId String @unique
+
+  event     Boolean  @default(true)
+  marketing Boolean  @default(true)
+  news      Boolean  @default(true)
+  updatedAt DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("notification_preference")
+}
+
+enum EventPermissionRole {
+  FOUNDER
+  ORGANIZER
+  ATTENDEE
+}
+
+enum EventType {
+  VIRTUAL
+  IN_PERSON
+  HYBRID
+}
+
+enum TimeFormat {
+  TWELVE_HOURS
+  TWENTYFOUR_HOURS
+}
+
+enum EventMessageSendType {
+  EVERYONE
+  ROLE
+}
+
+enum EventCategory {
+  EVENT
+  ACADEMIC
+  BUSINESS
+  CONFERENCE
+  CONVENTION
+  FESTIVAL
+  OTHER
+}
+
+enum EventLevel {
+  TRIAL
+  PRO
+}
+
+enum PrivacyLevel {
+  PUBLIC
+  PRIVATE
+  UNLISTED
+}
+
+model Event {
+  id           String        @id @default(cuid())
+  slug         String        @unique
+  name         String
+  location     String?
+  address      String?
+  level        EventLevel    @default(TRIAL)
+  timeFormat   TimeFormat    @default(TWELVE_HOURS)
+  startDate    DateTime
+  endDate      DateTime
+  type         EventType     @default(HYBRID)
+  category     EventCategory @default(EVENT)
+  privacy      PrivacyLevel  @default(PRIVATE)
+  image        String        @default("/images/inverse-logo.png")
+  banner       String?
+  website      String?
+  color        String        @default("#0066FF")
+  description  String?       @db.VarChar(5000)
+  updatedAt    DateTime      @updatedAt
+  createdAt    DateTime      @default(now())
+  timeZone     String        @default("America/New_York")
+  maxAttendees Int           @default(5)
+  password     String?
+
+  attendees         EventAttendee[]
+  sessions          EventSession[]
+  venues            EventVenue[]
+  roles             EventRole[]
+  sessionAttendees  EventSessionAttendee[]
+  sessionCategories EventSessionCategory[]
+  pages             EventPage[]
+  message           EventMessage[]
+
+  @@map("event")
+}
+
+model EventAttendee {
+  id             String              @id @default(cuid())
+  userId         String
+  eventId        String
+  eventRoleId    String
+  permissionRole EventPermissionRole
+  featured       Boolean             @default(false)
+
+  role  EventRole @relation(fields: [eventRoleId], references: [id], onDelete: Cascade)
+  user  User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  event Event     @relation(fields: [eventId], references: [id], onDelete: Cascade)
+
+  sessionAttendees EventSessionAttendee[]
+
+  @@unique([eventId, userId])
+  @@index([eventRoleId, userId, eventId])
+  @@map("event_attendee")
+}
+
+model EventRole {
+  id          String  @id @default(cuid())
+  eventId     String
+  slug        String
+  name        String
+  defaultRole Boolean @default(false)
+
+  event Event @relation(fields: [eventId], references: [id], onDelete: Cascade)
+
+  attendees EventAttendee[]
+
+  @@unique([eventId, slug])
+  @@index([eventId])
+  @@map("event_role")
+}
+
+model EventSession {
+  id           String   @id @default(cuid())
+  slug         String
+  eventId      String
+  startDate    DateTime
+  endDate      DateTime
+  venueId      String?
+  categoryId   String?
+  name         String
+  maxAttendees Int?
+  description  String?  @db.VarChar(5000)
+  updatedAt    DateTime @updatedAt
+  createdAt    DateTime @default(now())
+
+  event    Event                 @relation(fields: [eventId], references: [id], onDelete: Cascade)
+  venue    EventVenue?           @relation(fields: [venueId], references: [id], onDelete: Cascade)
+  category EventSessionCategory? @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+
+  attendees EventSessionAttendee[]
+
+  @@unique([eventId, slug])
+  @@index([eventId, venueId, categoryId])
+  @@map("event_session")
+}
+
+model EventSessionCategory {
+  id      String @id @default(cuid())
+  eventId String
+  slug    String
+  name    String
+  color   String
+
+  event Event @relation(fields: [eventId], references: [id], onDelete: Cascade)
+
+  sessions EventSession[]
+
+  @@unique([eventId, slug])
+  @@index([eventId])
+  @@map("event_session_category")
+}
+
+enum EventSessionAttendeeType {
+  ATTENDEE
+  ROLE
+}
+
+model EventSessionAttendee {
+  id         String                   @id @default(cuid())
+  sessionId  String
+  attendeeId String
+  eventId    String
+  type       EventSessionAttendeeType @default(ATTENDEE)
+
+  event    Event         @relation(fields: [eventId], references: [id], onDelete: Cascade)
+  session  EventSession  @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  attendee EventAttendee @relation(fields: [attendeeId], references: [id], onDelete: Cascade)
+
+  @@unique([eventId, sessionId, attendeeId])
+  @@index([eventId, sessionId, attendeeId])
+  @@map("event_session_attendee")
+}
+
+model EventVenue {
+  id          String   @id @default(cuid())
+  slug        String
+  eventId     String
+  name        String
+  address     String?
+  description String?  @db.VarChar(5000)
+  updatedAt   DateTime @updatedAt
+  createdAt   DateTime @default(now())
+
+  event Event @relation(fields: [eventId], references: [id], onDelete: Cascade)
+
+  sessions EventSession[]
+
+  @@unique([eventId, name])
+  @@unique([eventId, slug])
+  @@index([eventId])
+  @@map("event_venue")
+}
+
+model EventPage {
+  id        String   @id @default(cuid())
+  slug      String
+  eventId   String
+  name      String
+  body      String?  @db.VarChar(5000)
+  topLevel  Boolean  @default(false)
+  updatedAt DateTime @updatedAt
+  createdAt DateTime @default(now())
+
+  event Event @relation(fields: [eventId], references: [id], onDelete: Cascade)
+
+  @@unique([eventId, slug])
+  @@index([eventId])
+  @@map("event_page")
+}
+
+model EventMessage {
+  id             String               @id @default(cuid())
+  sentBy         String?
+  title          String
+  slug           String               @unique
+  eventId        String
+  body           String               @db.VarChar(5000)
+  createdAt      DateTime             @default(now())
+  sendTo         EventMessageSendType
+  roleId         String?
+  recipientCount Int?
+
+  event Event @relation(fields: [eventId], references: [id], onDelete: Cascade)
+
+  @@index([eventId])
+  @@map("event_message")
+}

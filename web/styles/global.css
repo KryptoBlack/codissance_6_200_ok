@@ -1,0 +1,327 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.react-datepicker__input-container input {
+	@apply form-input block w-full rounded border border-gray-300 bg-white text-base shadow-sm md:text-sm;
+}
+
+.react-datepicker-popper {
+	@apply z-40 rounded border border-gray-200 bg-white px-3 py-2 text-sm shadow-sm;
+
+	inset: unset !important;
+}
+
+.react-datepicker-left {
+	@apply absolute left-1/2 top-11 -translate-x-1/2 !important;
+}
+
+.react-datepicker-right {
+	@apply absolute left-1/2 top-11 -translate-x-1/2 !important;
+}
+
+.react-datepicker__portal {
+	@apply absolute top-12 right-0 z-10 w-72 transform-none rounded border border-gray-200 bg-white px-3 py-2 text-sm shadow;
+}
+
+.react-datepicker__month-container {
+	@apply flex w-64 flex-col;
+}
+
+.react-datepicker__month {
+	@apply flex flex-col;
+}
+
+.react-datepicker__current-month {
+	@apply ml-2.5 text-lg font-medium text-gray-800;
+}
+
+.react-datepicker__week {
+	@apply flex justify-around;
+}
+
+.react-datepicker__day-names {
+	@apply flex justify-around text-center text-xs font-medium text-gray-400;
+}
+
+.react-datepicker__day-name {
+	@apply flex h-8 w-8 items-center justify-center rounded-full py-1;
+}
+
+.react-datepicker__navigation {
+	@apply absolute top-2;
+}
+
+.react-datepicker__navigation--previous {
+	@apply right-12 flex h-8 w-8 items-center justify-center rounded transition hover:bg-gray-200;
+}
+
+.react-datepicker__navigation--next {
+	@apply right-4 flex h-8 w-8 items-center justify-center rounded transition hover:bg-gray-200;
+}
+
+.react-datepicker__day {
+	@apply mb-1 flex h-8 w-8 cursor-pointer items-center justify-center rounded py-1 text-sm leading-loose text-gray-700 transition;
+}
+
+.react-datepicker__day--disabled {
+	@apply cursor-not-allowed opacity-40 hover:bg-transparent;
+}
+
+.react-datepicker__day--outside-month {
+	@apply text-gray-300;
+}
+
+.react-datepicker__day--in-range {
+	@apply bg-gray-200;
+}
+
+.react-datepicker__day--in-selecting-range {
+	@apply bg-primary-100;
+}
+
+.react-datepicker__day--selecting-range-start {
+	@apply border-2 border-primary-500 bg-white;
+}
+
+.react-datepicker__day--selecting-range-end {
+	@apply border-2 border-primary-500 bg-white;
+}
+
+.react-datepicker__day--selected {
+	@apply bg-primary-500 text-white;
+}
+
+.react-datepicker__day--range-start {
+	@apply bg-primary-500 text-white hover:border-2 hover:border-primary-500 hover:bg-white hover:text-gray-700;
+}
+
+.react-datepicker__day--range-end {
+	@apply bg-primary-500 text-white hover:border-2 hover:border-primary-500 hover:bg-white hover:text-gray-700;
+}
+
+.Toastify__toast-container--top-right {
+	@apply md:top-20;
+}
+
+/*  HIDE Scrollbar
+    https://github.com/tailwindlabs/tailwindcss/discussions/2394
+    https://github.com/tailwindlabs/tailwindcss/pull/5732
+*/
+@layer utilities {
+	/* Chrome, Safari and Opera */
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+
+	.no-scrollbar {
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+	}
+}
+
+.react-datepicker {
+	@apply flex w-full justify-center;
+}
+
+.react-datepicker__time-container {
+	@apply flex w-24 flex-col justify-center pl-2;
+}
+
+.react-datepicker__header--time {
+	@apply flex items-center justify-between p-2;
+}
+
+.react-datepicker-time__header {
+	@apply text-lg font-bold text-gray-700;
+}
+
+.react-datepicker__time-list {
+	@apply no-scrollbar h-40 w-full overflow-y-auto;
+}
+
+.react-datepicker__time-list-item {
+	@apply my-1 cursor-pointer rounded-md px-2 py-1.5 hover:bg-primary-100;
+}
+
+.react-datepicker__time-list-item--selected {
+	@apply border border-primary-500 bg-primary-500 text-white transition hover:bg-white hover:text-black;
+}
+
+#nprogress .bar {
+	@apply bg-primary-500 !important;
+}
+
+#nprogress .spinner-icon {
+	@apply border-t-primary-500 border-l-primary-500 !important;
+}
+
+* {
+	@apply font-display;
+}
+
+.prose li > p {
+	@apply my-0;
+}
+
+.prose li {
+	@apply my-0;
+}
+
+.prose img {
+	@apply m-auto my-5 max-h-[600px] rounded-md border border-gray-200 shadow-sm;
+}
+
+.prose {
+	max-width: 100%;
+}
+
+.ProseMirror.ProseMirror-focused {
+	@apply focus:outline-none;
+}
+
+::selection {
+	@apply bg-gray-800 text-white;
+}
+
+.shadow-sm-bottom {
+	box-shadow: rgba(0, 0, 0, 0.05) 0 -1px 2px 0;
+}
+
+.bloom.medium {
+	@apply absolute h-32 w-32 sm:h-40 sm:w-40 md:w-44;
+}
+
+.bloom.small {
+	@apply absolute h-32 w-32 sm:h-40 sm:w-40 md:h-32 md:w-32;
+}
+
+.bloom {
+	@apply absolute h-32 w-32 sm:h-48 sm:w-48 md:h-60 md:w-60;
+	will-change: opacity;
+	opacity: 0;
+	filter: blur(80px);
+	border-radius: 50%;
+	transform: scale(1.5);
+	animation-name: bloomBurst;
+	animation-duration: 1s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+}
+
+.bloom.bloom-one {
+	background: conic-gradient(from 90deg at 50% 50%, #69a5ff, #dae6ff);
+	animation-delay: 300ms;
+}
+
+.bloom.bloom-two {
+	background: conic-gradient(from 90deg at 50% 50%, #5a44ff, #d8d7ff);
+	animation-delay: 0ms;
+}
+
+.bloom.bloom-three {
+	background: conic-gradient(from 90deg at 50% 50%, #ba4aff, #ebdfff);
+	animation-delay: 600ms;
+}
+
+@keyframes bloomBurst {
+	from {
+		opacity: 0;
+	}
+	40% {
+		opacity: 1;
+	}
+	to {
+		opacity: 0.6;
+	}
+}
+
+html {
+	@apply scroll-pt-14;
+}
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+	-webkit-appearance: none;
+}
+
+.chrome-picker {
+	@apply flex min-h-[120px] w-full flex-row rounded-md border border-gray-300 bg-white shadow-sm !important;
+}
+
+.chrome-picker > div {
+	@apply w-1/2 rounded-md pb-0 !important;
+}
+
+.chrome-picker .hue-horizontal {
+	@apply rounded-md !important;
+}
+
+[type='text']:focus,
+[type='email']:focus,
+[type='url']:focus,
+[type='password']:focus,
+[type='number']:focus,
+[type='date']:focus,
+[type='datetime-local']:focus,
+[type='month']:focus,
+[type='search']:focus,
+[type='tel']:focus,
+[type='time']:focus,
+[type='week']:focus,
+[multiple]:focus,
+textarea:focus,
+select:focus {
+	box-shadow: inherit;
+}
+
+@keyframes react-loading-skeleton {
+	100% {
+		transform: translateX(100%);
+	}
+}
+
+.react-loading-skeleton {
+	--base-color: #ebebeb;
+	--highlight-color: #f5f5f5;
+	--animation-duration: 1.5s;
+	--animation-direction: normal;
+	--pseudo-element-display: block; /* Enable animation */
+
+	background-color: var(--base-color);
+
+	border-radius: 0.25rem;
+	display: inline-flex;
+	line-height: 1;
+
+	position: relative;
+	overflow: hidden;
+	z-index: 1; /* Necessary for overflow: hidden to work correctly in Safari */
+}
+
+.react-loading-skeleton::after {
+	content: ' ';
+	display: var(--pseudo-element-display);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-image: linear-gradient(
+		90deg,
+		var(--base-color),
+		var(--highlight-color),
+		var(--base-color)
+	);
+	transform: translateX(-100%);
+
+	animation-name: react-loading-skeleton;
+	animation-direction: var(--animation-direction);
+	animation-duration: var(--animation-duration);
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
