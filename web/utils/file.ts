@@ -16,7 +16,7 @@ export const uploadToBucket = (params: S3.Types.PutObjectRequest): Promise<strin
 
 			let fileLocation = new URL(data?.Location);
 
-			resolve(fileLocation.pathname);
+			resolve(fileLocation.href);
 		});
 	});
 };
