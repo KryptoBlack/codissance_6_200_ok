@@ -202,6 +202,7 @@ export const timeZoneList = [
 	'Europe/Dublin',
 	'Asia/Jerusalem',
 	'Asia/Kolkata',
+	'Asia/Calcutta',
 	'Indian/Chagos',
 	'Asia/Baghdad',
 	'Asia/Tehran',
