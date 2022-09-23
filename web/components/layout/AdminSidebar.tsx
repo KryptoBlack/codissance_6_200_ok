@@ -63,11 +63,11 @@ export const AdminSidebar: React.FC<Props> = (props) => {
 				sidebarSkeleton
 			)}
 
-			{event ? (
+			{/* {event ? (
 				<SidebarLink href={`/events/${event.slug}/admin/messages`}>Messages</SidebarLink>
 			) : (
 				sidebarSkeleton
-			)}
+			)} */}
 
 			{separator}
 
@@ -79,11 +79,11 @@ export const AdminSidebar: React.FC<Props> = (props) => {
 				sidebarSkeleton
 			)}
 
-			{event ? (
+			{/* {event ? (
 				<SidebarLink href={`/events/${event.slug}/admin/pages`}>Pages</SidebarLink>
 			) : (
 				sidebarSkeleton
-			)}
+			)} */}
 
 			{event ? (
 				<SidebarLink href={`/events/${event.slug}/admin/organizers`}>Organizers</SidebarLink>
@@ -91,11 +91,11 @@ export const AdminSidebar: React.FC<Props> = (props) => {
 				sidebarSkeleton
 			)}
 
-			{event ? (
+			{/* {event ? (
 				<SidebarLink href={`/events/${event.slug}/admin/billing`}>Billing</SidebarLink>
 			) : (
 				sidebarSkeleton
-			)}
+			)} */}
 		</aside>
 	);
 };
