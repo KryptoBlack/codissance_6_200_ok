@@ -12,7 +12,8 @@ module.exports = withTM({
 			'cloudflare-ipfs.com',
 			'lh3.googleusercontent.com',
 			'cdn.evental.app',
-			'meetuppp-assets.s3.ap-south-1.amazonaws.com'
+			'meetuppp-assets.s3.ap-south-1.amazonaws.com',
+			'www.townscript.com'
 		]
 	},
 	eslint: {
