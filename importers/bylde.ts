@@ -23,7 +23,7 @@ export async function fetchAllGroups(): Promise<any> {
 	return groupsData;
 }
 
-export async function fetchAllEvents(groupData: any): Promise<any> {
+export async function fetchAllEvents(groupData: any): Promise<Prisma.EventCreateInput[]> {
 	let eventsData: any[] = [];
 	for (let i = 0; ; i++) {
 		let results = await apiRequest(`groups/api/v1/meetups/${groupData.GROUPUID}`, {

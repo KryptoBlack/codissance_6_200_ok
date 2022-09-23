@@ -1,48 +1,41 @@
 import type { Prisma } from '@prisma/client';
 import dayjs from 'dayjs';
 import timezone from 'dayjs/plugin/timezone';
+import utc from 'dayjs/plugin/utc';
 
 import { prisma } from '@eventalapp/shared/db/client';
-import { generateSlug } from '@eventalapp/shared/utils';
+import { processSlug } from '@eventalapp/shared/utils';
 
 import { fetchAllEvents, fetchAllGroups } from './bylde';
 
+dayjs.extend(utc);
 dayjs.extend(timezone);
 
-async function createEvent(eventData: Prisma.EventCreateInput) {
-	const slug = await generateSlug(eventData.name, async (val) => {
-		return !Boolean(
-			await prisma.event.findFirst({
-				where: {
-					slug: val
-				}
-			})
-		);
+async function createEvents(eventsData: Prisma.EventCreateInput[]) {
+	let slugs = eventsData.map(({ name }) => processSlug(name));
+	let slugUniqueness = await Promise.all(
+		slugs.map(async (slug) => !Boolean(await prisma.event.findFirst({ where: { slug } })))
+	);
+
+	return prisma.event.createMany({
+		data: eventsData
+			.filter((_, index) => slugUniqueness[index])
+			.map(({ startDate, endDate, timeZone, createdAt, ...otherEventData }, index) => ({
+				...otherEventData,
+				slug: slugs[index],
+				startDate: dayjs(startDate).tz(timeZone).startOf('day').toDate(),
+				endDate: dayjs(endDate).tz(timeZone).endOf('day').toDate(),
+				createdAt: dayjs(createdAt).toDate()
+			}))
 	});
-
-	const event = await prisma.event.create({
-		data: {
-			...eventData,
-			slug,
-			startDate: dayjs(eventData.startDate).tz(eventData.timeZone).startOf('day').toDate(),
-			endDate: dayjs(eventData.endDate).tz(eventData.timeZone).endOf('day').toDate()
-		}
-	});
-
-	if (!event) {
-		throw new Error('Could not create event.');
-	}
-
-	// no roles, and no one has edit permissions
-
-	return event;
 }
 
 async function main() {
 	let groups = await fetchAllGroups();
-	let events = await Promise.all(
+	let events: Prisma.EventCreateInput[] = await Promise.all(
 		groups.slice(0, 10).map((group: any) => fetchAllEvents(group))
 	).then((e) => e.flat());
-	console.log(events);
+
+	console.log(await createEvents(events.slice(0, 10)));
 }
 main();
