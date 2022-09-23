@@ -4,7 +4,7 @@ import { NextSeo } from 'next-seo';
 import Link from 'next/link';
 import React from 'react';
 
-import { useOrganizingEvents } from '@eventalapp/shared/hooks/queries/useOrganizingEvents';
+import { useUpcomingEvents } from '@eventalapp/shared/hooks/queries/useUpcomingEvents';
 
 import { AspectImage } from '../components/guides/AspectImage';
 import Column from '../components/layout/Column';
@@ -16,7 +16,7 @@ import { LinkButton } from '../components/primitives/LinkButton';
 import { Paragraph } from '../components/primitives/Paragraph';
 
 const HomePage: NextPage = () => {
-	const { error: organizingEventsError, data: organizingEvents } = useOrganizingEvents();
+	const { data: upcomingEvents, error: upcomingEventsError } = useUpcomingEvents(5);
 
 	return (
 		<>
@@ -97,7 +97,11 @@ const HomePage: NextPage = () => {
 				</div>
 
 				<Column>
-					<EventList events={organizingEvents} className="mt-5" />
+					{upcomingEventsError ? (
+						<Paragraph>Failed to load upcoming events</Paragraph>
+					) : (
+						<EventList events={upcomingEvents} className="mt-5" />
+					)}
 				</Column>
 
 				{/* <div className="bg-primary-600 text-white">
