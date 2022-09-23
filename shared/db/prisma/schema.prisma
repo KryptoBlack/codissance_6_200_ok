@@ -120,6 +120,7 @@ model Event {
   timeZone     String        @default("America/New_York")
   maxAttendees Int           @default(5)
   password     String?
+  externalUrl  String?
 
   attendees         EventAttendee[]
   sessions          EventSession[]
