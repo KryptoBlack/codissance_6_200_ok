@@ -28,6 +28,7 @@ import { Label } from '../primitives/Label';
 import Select from '../primitives/Select';
 import Tooltip from '../primitives/Tooltip';
 import CreateRoleDialog from '../roles/CreateRoleDialog';
+import { baseURL } from '@eventalapp/shared/api';
 
 type Props = {
 	eid: string;
@@ -169,7 +170,7 @@ export const AdminEditAttendeeForm: React.FC<Props> = (props) => {
 							Username *<HelpTooltip message={copy.tooltip.userSlug} />
 						</Label>
 						<div className="flex items-center">
-							<span className="mr-1 text-base text-gray-700">evental.app/users/</span>
+							<span className="mr-1 text-base text-gray-700">{baseURL}</span>
 							<Input placeholder="user-slug" {...register('slug')} />
 						</div>
 						{errors?.slug?.message && <ErrorMessage>{errors?.slug?.message}</ErrorMessage>}
