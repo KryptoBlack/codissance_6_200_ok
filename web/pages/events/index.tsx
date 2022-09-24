@@ -1,3 +1,4 @@
+import { Input } from 'components/primitives/Input';
 import type { NextPage } from 'next';
 import { NextSeo } from 'next-seo';
 import Link from 'next/link';
@@ -83,6 +84,13 @@ const EventsPage: NextPage = () => {
 					<Heading className="mb-4 text-center">Upcoming Events</Heading>
 
 					{user && <EventsPageNavigation />}
+
+					<Input
+						placeholder="Start searching..."
+						onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+							e.preventDefault();
+						}}
+					/>
 
 					<EventList events={upcomingEvents} hidePastEvents />
 				</Column>

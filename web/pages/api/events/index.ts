@@ -6,7 +6,9 @@ import { api } from '../../../utils/api';
 
 export default api({
 	async GET({ ctx, req }) {
-		return await getUpcomingEvents(parseInt(req.query.limit as string));
+		return await getUpcomingEvents(
+			req.query.limit ? parseInt(req.query.limit as string) : undefined
+		);
 	}
 });
 
