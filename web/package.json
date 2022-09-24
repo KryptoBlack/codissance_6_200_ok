@@ -114,8 +114,9 @@
 		"stripe": "^9.0.0",
 		"superjson": "^1.9.0",
 		"tailwindcss-radix": "^2.2.0",
-		"zod": "^3.14.4",
-		"@prisma/client": "^4.1.0"
+		"@prisma/client": "^4.1.0",
+		"web3": "^1.8.0",
+		"zod": "^3.14.4"
 	},
 	"devDependencies": {
 		"@faker-js/faker": "^6.3.1",
