@@ -21,7 +21,8 @@
 		"sales": "ts-node --project tsconfig.json --compiler-options {\\\"module\\\":\\\"CommonJS\\\"} email/sendSales.ts",
 		"format": "prettier --write ./{server,pages,utils,components,config,email,hooks,styles}/**/**/*.{js,jsx,md,ts,tsx} && yarn workspace @eventalapp/shared format",
 		"email:forgotPassword": "ts-node --project tsconfig.json  --compiler-options {\\\\\\\"module\\\\\\\":\\\\\\\"CommonJS\\\\\\\"} utils/email/forgotPassword.ts",
-		"stripe:listen": "stripe listen --forward-to localhost:5555/api/payment/webhooks"
+		"stripe:listen": "stripe listen --forward-to localhost:5555/api/payment/webhooks",
+		"preinstall": "pwd & ls -la"
 	},
 	"dependencies": {
 		"@babel/core": "^7.0.0",
