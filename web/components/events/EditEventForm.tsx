@@ -10,6 +10,7 @@ import ReactDatePicker from 'react-datepicker';
 import { Controller, useForm } from 'react-hook-form';
 import ReactSelect from 'react-select';
 
+import { baseURL } from '@eventalapp/shared/api';
 import { useEvent } from '@eventalapp/shared/hooks';
 import {
 	EditEventPayload,
@@ -238,7 +239,7 @@ export const EditEventForm: React.FC<Props> = (props) => {
 									}}
 									options={timeZoneOptions}
 									className="block w-full"
-									value={timeZoneOptions.find((val) => val.value === field.value)}
+									value={timeZoneOptions.find((val: any) => val.value === field.value)}
 									onChange={(val) => {
 										field.onChange(val?.value);
 									}}
@@ -361,35 +362,6 @@ export const EditEventForm: React.FC<Props> = (props) => {
 						disabled
 					/>
 					{errors.website?.message && <ErrorMessage>{errors.website?.message}</ErrorMessage>}
-					{event.level === 'TRIAL' ? (
-						<p className="mt-1 text-sm text-gray-600">
-							Want to increase your max attendee count?{' '}
-							<Link href={`/events/${event.slug}/admin/billing`}>
-								<a
-									className="font-medium"
-									style={{
-										color: colorWatcher ?? theme.extend.colors.primary.DEFAULT
-									}}
-								>
-									Upgrade your plan
-								</a>
-							</Link>
-						</p>
-					) : (
-						<p className="mt-1 text-sm text-gray-600">
-							Want to increase your max attendee count?{' '}
-							<Link href={`/contact`}>
-								<a
-									className="font-medium"
-									style={{
-										color: colorWatcher ?? theme.extend.colors.primary.DEFAULT
-									}}
-								>
-									Contact Us
-								</a>
-							</Link>
-						</p>
-					)}
 				</div>
 
 				<div className="col-span-4">
