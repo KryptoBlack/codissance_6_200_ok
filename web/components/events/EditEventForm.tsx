@@ -10,6 +10,7 @@ import ReactDatePicker from 'react-datepicker';
 import { Controller, useForm } from 'react-hook-form';
 import ReactSelect from 'react-select';
 
+import { baseURL } from '@eventalapp/shared/api';
 import { useEvent } from '@eventalapp/shared/hooks';
 import {
 	EditEventPayload,
@@ -107,11 +108,7 @@ export const EditEventForm: React.FC<Props> = (props) => {
 						message={'Upload an image for your event. You can use an event logo or icon here.'}
 					>
 						<div className="inline-block">
-							<AvatarUpload
-								files={files}
-								setFiles={setFiles}
-								placeholderImageUrl={event.image}
-							/>
+							<AvatarUpload files={files} setFiles={setFiles} placeholderImageUrl={event.image} />
 						</div>
 					</Tooltip>
 
@@ -295,7 +292,7 @@ export const EditEventForm: React.FC<Props> = (props) => {
 						Slug *<HelpTooltip message={copy.tooltip.eventSlug} />
 					</Label>
 					<div className="flex items-center">
-						<span className="mr-1 text-sm md:text-base">evental.app/events/</span>
+						<span className="mr-1 text-sm md:text-base">{baseURL}</span>
 						<Input placeholder="event-slug" {...register('slug')} color={colorWatcher} />
 					</div>
 					{errors.slug?.message && <ErrorMessage>{errors.slug?.message}</ErrorMessage>}
@@ -365,35 +362,6 @@ export const EditEventForm: React.FC<Props> = (props) => {
 						disabled
 					/>
 					{errors.website?.message && <ErrorMessage>{errors.website?.message}</ErrorMessage>}
-					{event.level === 'TRIAL' ? (
-						<p className="mt-1 text-sm text-gray-600">
-							Want to increase your max attendee count?{' '}
-							<Link href={`/events/${event.slug}/admin/billing`}>
-								<a
-									className="font-medium"
-									style={{
-										color: colorWatcher ?? theme.extend.colors.primary.DEFAULT
-									}}
-								>
-									Upgrade your plan
-								</a>
-							</Link>
-						</p>
-					) : (
-						<p className="mt-1 text-sm text-gray-600">
-							Want to increase your max attendee count?{' '}
-							<Link href={`/contact`}>
-								<a
-									className="font-medium"
-									style={{
-										color: colorWatcher ?? theme.extend.colors.primary.DEFAULT
-									}}
-								>
-									Contact Us
-								</a>
-							</Link>
-						</p>
-					)}
 				</div>
 
 				<div className="col-span-4">
