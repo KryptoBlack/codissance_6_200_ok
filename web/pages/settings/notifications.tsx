@@ -24,7 +24,7 @@ const NotificationsPage: NextPage = () => {
 					description: 'Update your notification preferences',
 					images: [
 						{
-							url: 'https://cdn.evental.app/images/logo.jpg',
+							url: 'https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/logo.jpg',
 							width: 389,
 							height: 389,
 							alt: 'Meetuppp Logo Alt',

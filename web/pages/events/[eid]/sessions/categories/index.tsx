@@ -40,7 +40,7 @@ const SessionCategoriesPage: NextPage = () => {
 				}
 			]}
 			openGraph={{
-				url: `https://evental.app/events/${event.slug}/sessions/categories`,
+				url: `http://localhost:5555/events/${event.slug}/sessions/categories`,
 				title: `Session Categories — ${event.name}`,
 				description: `View all of the sessions types for ${event.name}.`,
 				images: [

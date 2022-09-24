@@ -32,13 +32,13 @@ const SignInPage: NextPage = () => {
 				title="Sign In — Meetuppp"
 				description="Sign into your Meetuppp account. Create, organize, or attend events with ease."
 				openGraph={{
-					url: 'https://evental.app/auth/signin',
+					url: 'http://localhost:5555/auth/signin',
 					title: 'Sign In — Meetuppp',
 					description:
 						'Sign into your Meetuppp account. Create, organize, or attend events with ease.',
 					images: [
 						{
-							url: 'https://cdn.evental.app/images/logo.jpg',
+							url: 'https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/logo.jpg',
 							width: 389,
 							height: 389,
 							alt: 'Meetuppp Logo Alt',

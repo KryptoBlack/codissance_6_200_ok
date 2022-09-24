@@ -23,13 +23,13 @@ export const template = `
         <mj-text font-size="16px" color="#545454" font-family="Inter, Roboto, Arial" line-height="1.4">
           Greetings, {{organizationName}}!<br /><br />
 
-          I recently caught word of {{eventName}}, and wanted to reach out on behalf of <a style="color: #0066FF;" href="https://evental.app">Meetuppp</a> and see if you had all of your current/future event management needs sorted out.<br /><br />
+          I recently caught word of {{eventName}}, and wanted to reach out on behalf of <a style="color: #0066FF;" href="http://localhost:5555">Meetuppp</a> and see if you had all of your current/future event management needs sorted out.<br /><br />
 
           Here at Meetuppp, we felt that event management software needs to be highly intuitive for organizers, attendees, speakers, etc. but the current event management solutions that exist are either overpriced, unintuitive and/or have poor user interface/experience.<br /><br />
 
           So we decided to build Meetuppp with all of those pain points in mind, and now we are looking for some great organizations to utilize our new platform.<br /><br />
 
-          To use our platform, we are offering <a style="color: #0066FF;" href="https://evental.app/pricing">Meetuppp Pro</a> for <span style="font-weight: 900;">free</span> until October 31st, 2022. If you are hosting an event later than this date, we are happy to extend that offer! And we always offer a free trial to test our platform, and/or set up your event.<br /><br />
+          To use our platform, we are offering <a style="color: #0066FF;" href="http://localhost:5555/pricing">Meetuppp Pro</a> for <span style="font-weight: 900;">free</span> until October 31st, 2022. If you are hosting an event later than this date, we are happy to extend that offer! And we always offer a free trial to test our platform, and/or set up your event.<br /><br />
 
           Do you have a few minutes this week or next to chat regarding this offer and/or your event management needs?<br /><br />
 
@@ -56,7 +56,7 @@ export const template = `
         </mj-text>
 
 
-        <mj-image align="left" href="https://evental.app" target="_blank" width="120px" src="https://cdn.evental.app/images/logo-text.png" />
+        <mj-image align="left" href="http://localhost:5555" target="_blank" width="120px" src="https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/logo-text.png" />
       </mj-column>
     </mj-section>
   </mj-body>

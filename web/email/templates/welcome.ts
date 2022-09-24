@@ -26,16 +26,16 @@ export const template = `
 
         <mj-text font-size="16px" color="#777777" font-family="Inter, Roboto, Arial" line-height="1.4">We are happy you have decided to join us. If you have any questions feel free to reach us at <a href="mailto:support@evental.app" style="color: #0066FF; text-decoration:none;">
             support@evental.app
-          </a> or <a href="https://evental.app/support" style="color: #0066FF; text-decoration:none;">
+          </a> or <a href="http://localhost:5555/support" style="color: #0066FF; text-decoration:none;">
             create a support ticket</a>.
         </mj-text>
 
         <mj-text font-size="16px" color="#777777" font-family="Inter, Roboto, Arial" line-height="1.4">To get started using Meetuppp:
           <ul style="margin: 10px auto 10px auto;">
-            <li><a style="color: #0066FF; text-decoration:none;" href="https://evental.app/events/attending" target="_blank">View your events</a></li>
-            <li style="padding-top: 3px"><a style="color: #0066FF; text-decoration:none;" href="https://evental.app/settings" target="_blank">Update your profile</a></li>
-            <li style="padding-top: 3px"><a style="color: #0066FF; text-decoration:none;" href="https://evental.app/events/create" target="_blank">Create an event</a></li>
-            <li style="padding-top: 3px"><a style="color: #0066FF; text-decoration:none;" href="https://evental.app/guides" target="_blank">Checkout our user guides</a></li>
+            <li><a style="color: #0066FF; text-decoration:none;" href="http://localhost:5555/events/attending" target="_blank">View your events</a></li>
+            <li style="padding-top: 3px"><a style="color: #0066FF; text-decoration:none;" href="http://localhost:5555/settings" target="_blank">Update your profile</a></li>
+            <li style="padding-top: 3px"><a style="color: #0066FF; text-decoration:none;" href="http://localhost:5555/events/create" target="_blank">Create an event</a></li>
+            <li style="padding-top: 3px"><a style="color: #0066FF; text-decoration:none;" href="http://localhost:5555/guides" target="_blank">Checkout our user guides</a></li>
           </ul>
         </mj-text>
 
@@ -47,10 +47,10 @@ export const template = `
         <mj-divider border-color="#CDCDCD" border-width="1px" />
 
         <mj-text font-size="12px" color="#777777" font-family="Inter, Roboto, Arial" line-height="1.4" align="center">
-          You are receiving this email because you signed up for <a href="https://evental.app/support" style="color: #202020; text-decoration:none;">Meetuppp</a>. If you no longer would like to receive these emails, please <a href="https://evental.app/settings/notifications" style="color: #202020; text-decoration:none;">unsubscribe</a>.
+          You are receiving this email because you signed up for <a href="http://localhost:5555/support" style="color: #202020; text-decoration:none;">Meetuppp</a>. If you no longer would like to receive these emails, please <a href="http://localhost:5555/settings/notifications" style="color: #202020; text-decoration:none;">unsubscribe</a>.
         </mj-text>
 
-        <mj-image href="https://evental.app" target="_blank" width="120px" src="https://cdn.evental.app/images/logo-text.png" />
+        <mj-image href="http://localhost:5555" target="_blank" width="120px" src="https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/logo-text.png" />
       </mj-column>
     </mj-section>
   </mj-body>

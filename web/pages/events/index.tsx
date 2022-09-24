@@ -26,14 +26,14 @@ const EventsPage: NextPage = () => {
 		<NextSeo
 			title="Upcoming Events — Meetuppp"
 			description="View all of the public upcoming events on evental.app."
-			canonical="https://evental.app/events"
+			canonical="http://localhost:5555/events"
 			openGraph={{
-				url: 'https://evental.app/events',
+				url: 'http://localhost:5555/events',
 				title: 'Upcoming Events',
 				description: 'View all of the public upcoming events on evental.app.',
 				images: [
 					{
-						url: 'https://cdn.evental.app/images/logo.jpg',
+						url: 'https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/logo.jpg',
 						width: 800,
 						height: 600,
 						alt: 'Meetuppp Logo Alt',

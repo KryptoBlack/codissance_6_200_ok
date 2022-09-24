@@ -74,7 +74,7 @@ const ViewSessionPage: NextPage = () => {
 				}
 			]}
 			openGraph={{
-				url: `https://evental.app/events/${event.slug}/sessions/${session.slug}`,
+				url: `http://localhost:5555/events/${event.slug}/sessions/${session.slug}`,
 				title: `${session.name} — ${event.name}`,
 				description: `View the attendees, speakers, and details of ${session.name} at ${event.name}`,
 				images: [

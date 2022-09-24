@@ -17,13 +17,13 @@ const ContactPage: NextPage = () => {
 				title="Contact — Meetuppp"
 				description="Contact our team for support. We are here to help you with any questions you may have."
 				openGraph={{
-					url: 'https://evental.app/contact',
+					url: 'http://localhost:5555/contact',
 					title: 'Contact — Meetuppp',
 					description:
 						'Contact our team for support. We are here to help you with any questions you may have.',
 					images: [
 						{
-							url: 'https://cdn.evental.app/images/logo.jpg',
+							url: 'https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/logo.jpg',
 							width: 389,
 							height: 389,
 							alt: 'Meetuppp Logo Alt',

@@ -42,7 +42,7 @@ const MessagesPage: NextPage = () => {
 				}
 			]}
 			openGraph={{
-				url: `https://evental.app/events/${event.slug}/messages`,
+				url: `http://localhost:5555/events/${event.slug}/messages`,
 				title: `Messages — ${event.name}`,
 				description: `View all of the messages at ${event.name}.`,
 				images: [

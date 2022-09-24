@@ -47,7 +47,7 @@ const SessionRegisterPage: NextPage = () => {
 				}
 			]}
 			openGraph={{
-				url: `https://evental.app/events/${event.slug}/sessions/${session.slug}/register`,
+				url: `http://localhost:5555/events/${event.slug}/sessions/${session.slug}/register`,
 				title: `Register for ${session.name} — ${event.name}`,
 				description: `Register for the ${session.name} session at ${event.name}`,
 				images: [

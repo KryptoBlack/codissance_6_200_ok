@@ -47,7 +47,7 @@ const ViewAttendeePage: NextPage = () => {
 				}
 			]}
 			openGraph={{
-				url: `https://evental.app/events/${event.slug}/attendees/${attendee.user.id}`,
+				url: `http://localhost:5555/events/${event.slug}/attendees/${attendee.user.id}`,
 				title: `${attendee.user.name} — ${event.name}`,
 				description: `View ${attendee.user.name} at ${event.name}.`,
 				images: [

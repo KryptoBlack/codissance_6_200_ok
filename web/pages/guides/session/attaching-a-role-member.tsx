@@ -35,12 +35,12 @@ const InvitingSessionMemberGuidePage: NextPage = () => {
 					title="Attach a role member — Meetuppp"
 					description={`Learn how to attach a role member to your session on Meetuppp.`}
 					openGraph={{
-						url: 'https://evental.app/guides/session/attaching-a-role-member',
+						url: 'http://localhost:5555/guides/session/attaching-a-role-member',
 						title: 'Attach a role member — Meetuppp',
 						description: `Learn how to attach a role member to your session on Meetuppp.`,
 						images: [
 							{
-								url: 'https://cdn.evental.app/images/logo.jpg',
+								url: 'https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/logo.jpg',
 								width: 389,
 								height: 389,
 								alt: 'Meetuppp Logo Alt',

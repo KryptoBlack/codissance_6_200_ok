@@ -71,7 +71,7 @@ const ViewEventPage: NextPage = () => {
 				}
 			]}
 			openGraph={{
-				url: `https://evental.app/events/${event.slug}`,
+				url: `http://localhost:5555/events/${event.slug}`,
 				title: `${event.name} — Meetuppp`,
 				description: htmlToText(event.description || ''),
 				images: [

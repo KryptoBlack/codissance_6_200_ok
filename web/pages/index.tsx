@@ -24,13 +24,13 @@ const HomePage: NextPage = () => {
 				title="Meetuppp — Event management software from the future"
 				description="Event management software that's highly intuitive. Your attendees and organizers will love using Meetuppp for your in-person, hybrid, and virtual events."
 				openGraph={{
-					url: 'https://evental.app',
+					url: 'http://localhost:5555',
 					title: 'Meetuppp — Event management software from the future',
 					description:
 						"Event management software that's highly intuitive. Your attendees and organizers will love using Meetuppp for your in-person, hybrid, and virtual events.",
 					images: [
 						{
-							url: 'https://cdn.evental.app/images/logo.jpg',
+							url: 'https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/logo.jpg',
 							width: 389,
 							height: 389,
 							alt: 'Meetuppp Logo Alt',
@@ -80,7 +80,9 @@ const HomePage: NextPage = () => {
 							alt="Event Overview"
 							ratio={1602 / 817}
 							className="border border-gray-200 bg-white shadow-sm"
-							imageUrl={'https://cdn.evental.app/images/landing-graphic.jpg'}
+							imageUrl={
+								'https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/landing-graphic.jpg'
+							}
 						/>
 					</div>
 				</Column>

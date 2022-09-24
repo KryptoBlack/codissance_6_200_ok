@@ -33,12 +33,12 @@ const CreatingASessionGuidePage: NextPage = () => {
 					title="Creating a venue — Meetuppp"
 					description={`Learn how to create a venue for your event on Meetuppp.`}
 					openGraph={{
-						url: 'https://evental.app/guides/venue/creating-a-venue',
+						url: 'http://localhost:5555/guides/venue/creating-a-venue',
 						title: 'Creating a venue — Meetuppp',
 						description: `Learn how to create a venue for your event on Meetuppp.`,
 						images: [
 							{
-								url: 'https://cdn.evental.app/images/logo.jpg',
+								url: 'https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/logo.jpg',
 								width: 389,
 								height: 389,
 								alt: 'Meetuppp Logo Alt',

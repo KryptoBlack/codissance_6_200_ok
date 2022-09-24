@@ -107,11 +107,7 @@ export const EditEventForm: React.FC<Props> = (props) => {
 						message={'Upload an image for your event. You can use an event logo or icon here.'}
 					>
 						<div className="inline-block">
-							<AvatarUpload
-								files={files}
-								setFiles={setFiles}
-								placeholderImageUrl={event.image}
-							/>
+							<AvatarUpload files={files} setFiles={setFiles} placeholderImageUrl={event.image} />
 						</div>
 					</Tooltip>
 
@@ -295,7 +291,7 @@ export const EditEventForm: React.FC<Props> = (props) => {
 						Slug *<HelpTooltip message={copy.tooltip.eventSlug} />
 					</Label>
 					<div className="flex items-center">
-						<span className="mr-1 text-sm md:text-base">evental.app/events/</span>
+						<span className="mr-1 text-sm md:text-base">localhost:5555/events/</span>
 						<Input placeholder="event-slug" {...register('slug')} color={colorWatcher} />
 					</div>
 					{errors.slug?.message && <ErrorMessage>{errors.slug?.message}</ErrorMessage>}

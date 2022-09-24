@@ -16,12 +16,12 @@ const SupportPage: NextPage = () => {
 				title="Support — Meetuppp"
 				description={`Fill out the form below to submit a support ticket.`}
 				openGraph={{
-					url: 'https://evental.app/pricing',
+					url: 'http://localhost:5555/pricing',
 					title: 'Support — Meetuppp',
 					description: `Fill out the form below to submit a support ticket.`,
 					images: [
 						{
-							url: 'https://cdn.evental.app/images/logo.jpg',
+							url: 'https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/logo.jpg',
 							width: 389,
 							height: 389,
 							alt: 'Meetuppp Logo Alt',

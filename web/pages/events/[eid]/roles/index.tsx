@@ -42,7 +42,7 @@ const RolesPage: NextPage = () => {
 				}
 			]}
 			openGraph={{
-				url: `https://evental.app/events/${event.slug}/roles`,
+				url: `http://localhost:5555/events/${event.slug}/roles`,
 				title: `Roles — ${event.name}`,
 				description: `View all of the roles at ${event.name}.`,
 				images: [

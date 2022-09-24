@@ -48,7 +48,7 @@ const ViewSessionCategoryPage: NextPage = () => {
 				}
 			]}
 			openGraph={{
-				url: `https://evental.app/events/${event.slug}/sessions/dates/${date}`,
+				url: `http://localhost:5555/events/${event.slug}/sessions/dates/${date}`,
 				title: `${dayjs(String(date)).startOf('day').tz(event.timeZone).format('YYYY/MM/DD')} — ${
 					event.name
 				}`,

@@ -62,7 +62,7 @@ for (let i = 250; i <= MAX_ATTENDEES; i += 250) {
 		level: 'PRO',
 		description: `Meetuppp Pro (${i} Attendees)`,
 		name: `Meetuppp Pro (${i} Attendees)`,
-		image: `https://cdn.evental.app/images/logo.jpg`,
+		image: `https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/logo.jpg`,
 		attendees: i,
 		perAttendeePrice: Number((priceForAttendees / i).toFixed(2))
 	};
@@ -91,7 +91,7 @@ for (let i = 250; i <= MAX_ATTENDEES; i += 250) {
 		level: 'PRO',
 		description: `Meetuppp Education/Non-profit (${i} Attendees)`,
 		name: `Meetuppp Education/Non-profit (${i} Attendees)`,
-		image: `https://cdn.evental.app/images/logo.jpg`,
+		image: `https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/logo.jpg`,
 		attendees: i,
 		perAttendeePrice: Number((priceForAttendees / i).toFixed(2))
 	};

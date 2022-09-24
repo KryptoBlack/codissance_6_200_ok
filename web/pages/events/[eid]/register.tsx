@@ -44,7 +44,7 @@ const EventRegisterPage: NextPage = () => {
 				}
 			]}
 			openGraph={{
-				url: `https://evental.app/events/${event.slug}/register`,
+				url: `http://localhost:5555/events/${event.slug}/register`,
 				title: `Register for ${event.name} — Meetuppp`,
 				description: `Fill out the form below to register for ${
 					event.name

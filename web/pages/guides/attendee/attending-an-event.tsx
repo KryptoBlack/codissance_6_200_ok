@@ -23,12 +23,12 @@ const AttendingAnEventGuidePage: NextPage = () => {
 					title="Attending an event — Meetuppp"
 					description={`Learn how to get started as an attendee or a speaker.`}
 					openGraph={{
-						url: 'https://evental.app/guides/attendee/attending-an-event',
+						url: 'http://localhost:5555/guides/attendee/attending-an-event',
 						title: 'Attending an event — Meetuppp',
 						description: `Learn how to get started as an attendee or a speaker.`,
 						images: [
 							{
-								url: 'https://cdn.evental.app/images/logo.jpg',
+								url: 'https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/logo.jpg',
 								width: 389,
 								height: 389,
 								alt: 'Meetuppp Logo Alt',

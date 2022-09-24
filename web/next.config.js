@@ -11,7 +11,6 @@ module.exports = withTM({
 			'www.gravatar.com',
 			'cloudflare-ipfs.com',
 			'lh3.googleusercontent.com',
-			'cdn.evental.app',
 			'meetuppp-assets.s3.ap-south-1.amazonaws.com',
 			'www.townscript.com'
 		]

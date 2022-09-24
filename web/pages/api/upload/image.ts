@@ -33,7 +33,7 @@ export default api({
 		}
 
 		const body: ImageUploadResponse = {
-			pathName: `https://cdn.evental.app${fileLocation}`
+			pathName: `https://meetuppp-assets.s3.ap-south-1.amazonaws.com${fileLocation}`
 		};
 
 		return body;

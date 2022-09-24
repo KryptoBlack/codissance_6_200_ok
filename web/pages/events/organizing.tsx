@@ -34,12 +34,12 @@ const OrganizingEventsPage: NextPage = () => {
 			title="Organizing Events — Meetuppp"
 			description="View all of the events you are organizing."
 			openGraph={{
-				url: 'https://evental.app/events/organizing',
+				url: 'http://localhost:5555/events/organizing',
 				title: 'Organizing Events',
 				description: 'View all of the events you are organizing.',
 				images: [
 					{
-						url: 'https://cdn.evental.app/images/logo.jpg',
+						url: 'https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/logo.jpg',
 						width: 389,
 						height: 389,
 						alt: 'Meetuppp Logo Alt',

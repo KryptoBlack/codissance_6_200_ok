@@ -2,7 +2,7 @@
 	"$schema": "https://json.schemastore.org/web-manifest-combined.json",
 	"name": "Meetuppp",
 	"short_name": "Meetuppp",
-	"start_url": "https://evental.app/",
+	"start_url": "http://localhost:5555/",
 	"display": "browser",
 	"background_color": "#FFFFFF",
 	"description": "Event management app.",

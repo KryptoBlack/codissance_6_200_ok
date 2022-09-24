@@ -49,9 +49,9 @@ export const EventListItem: React.FC<EventListItemProps> = (props) => {
 								<Image
 									alt={event.name}
 									src={
-										event.image
+										event?.image
 											? event.image
-											: `https://cdn.evental.app/images/default-event.jpg`
+											: `https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/default-event.jpg`
 									}
 									layout="fill"
 									className="rounded-md"

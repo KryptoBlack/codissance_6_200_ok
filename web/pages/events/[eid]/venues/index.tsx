@@ -43,7 +43,7 @@ const SessionsPage: NextPage = () => {
 				}
 			]}
 			openGraph={{
-				url: `https://evental.app/events/${event.slug}/venues`,
+				url: `http://localhost:5555/events/${event.slug}/venues`,
 				title: `Venues — ${event.name}`,
 				description: `View all of the venues for ${event.name}.`,
 				images: [

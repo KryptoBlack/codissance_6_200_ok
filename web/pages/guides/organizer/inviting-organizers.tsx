@@ -22,12 +22,12 @@ const CreatingASessionCategoryGuidePage: NextPage = () => {
 					title="Inviting Organizers — Meetuppp"
 					description={`Learn how to invite additional organizers to assist you in setting up your event.`}
 					openGraph={{
-						url: 'https://evental.app/guides/organizer/inviting-organizers',
+						url: 'http://localhost:5555/guides/organizer/inviting-organizers',
 						title: 'Inviting Organizers — Meetuppp',
 						description: `Learn how to invite additional organizers to assist you in setting up your event.`,
 						images: [
 							{
-								url: 'https://cdn.evental.app/images/logo.jpg',
+								url: 'https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/logo.jpg',
 								width: 389,
 								height: 389,
 								alt: 'Meetuppp Logo Alt',

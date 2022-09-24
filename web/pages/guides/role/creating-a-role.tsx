@@ -33,12 +33,12 @@ const CreatingARoleGuidePage: NextPage = () => {
 					title="Creating a role — Meetuppp"
 					description={`Learn how to create a role for your event on Meetuppp.`}
 					openGraph={{
-						url: 'https://evental.app/guides/role/creating-a-role',
+						url: 'http://localhost:5555/guides/role/creating-a-role',
 						title: 'Creating a role — Meetuppp',
 						description: `Learn how to create a role for your event on Meetuppp.`,
 						images: [
 							{
-								url: 'https://cdn.evental.app/images/logo.jpg',
+								url: 'https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/logo.jpg',
 								width: 389,
 								height: 389,
 								alt: 'Meetuppp Logo Alt',

@@ -29,12 +29,12 @@ const PricingPage: NextPage = () => {
 				title="Pricing — Meetuppp"
 				description={`Single Event Plans & Pricing. Starting at ${proAttendeePricing[250].price} USD.`}
 				openGraph={{
-					url: 'https://evental.app/pricing',
+					url: 'http://localhost:5555/pricing',
 					title: 'Pricing — Meetuppp',
 					description: `Single Event Plans & Pricing. Starting at ${proAttendeePricing[250].price} USD.`,
 					images: [
 						{
-							url: 'https://cdn.evental.app/images/logo.jpg',
+							url: 'https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/logo.jpg',
 							width: 389,
 							height: 389,
 							alt: 'Meetuppp Logo Alt',

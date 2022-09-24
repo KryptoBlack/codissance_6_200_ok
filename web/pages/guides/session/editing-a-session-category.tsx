@@ -36,12 +36,12 @@ const EditingASessionCategoryGuidePage: NextPage = () => {
 					title="Editing a session category — Meetuppp"
 					description={`Learn how to edit a session category for your event on Meetuppp.`}
 					openGraph={{
-						url: 'https://evental.app/guides/session/editing-a-session-type',
+						url: 'http://localhost:5555/guides/session/editing-a-session-type',
 						title: 'Editing a session category — Meetuppp',
 						description: `Learn how to edit a session category for your event on Meetuppp.`,
 						images: [
 							{
-								url: 'https://cdn.evental.app/images/logo.jpg',
+								url: 'https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/logo.jpg',
 								width: 389,
 								height: 389,
 								alt: 'Meetuppp Logo Alt',

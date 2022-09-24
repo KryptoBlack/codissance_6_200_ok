@@ -17,7 +17,7 @@ export const LogoLinkItem: React.FC<Props> = (props) => {
 				<NavigationMenuPrimitive.Item className="h-full">
 					<span className="flex h-full flex-row items-center">
 						<img
-							className="w-14 h-14"
+							className="w-10 h-10 m-2"
 							src="https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/logo.png"
 							alt="logo"
 						/>

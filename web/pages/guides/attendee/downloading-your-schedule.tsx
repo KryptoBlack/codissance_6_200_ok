@@ -27,12 +27,12 @@ const AttendingASessionGuidePage: NextPage = () => {
 					title="Downloading your schedule — Meetuppp"
 					description={`Learn how to view and download your schedule on evental.`}
 					openGraph={{
-						url: 'https://evental.app/guides/attendee/downloading-your-schedule',
+						url: 'http://localhost:5555/guides/attendee/downloading-your-schedule',
 						title: 'Downloading your schedule — Meetuppp',
 						description: `Learn how to view and download your schedule on evental.`,
 						images: [
 							{
-								url: 'https://cdn.evental.app/images/logo.jpg',
+								url: 'https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/logo.jpg',
 								width: 389,
 								height: 389,
 								alt: 'Meetuppp Logo Alt',
