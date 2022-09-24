@@ -81,7 +81,7 @@ const HomePage: NextPage = () => {
 							ratio={1602 / 817}
 							className="border border-gray-200 bg-white shadow-sm"
 							imageUrl={
-								'https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/landing-graphic.jpg'
+								'https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/landing-graphic.png'
 							}
 						/>
 					</div>

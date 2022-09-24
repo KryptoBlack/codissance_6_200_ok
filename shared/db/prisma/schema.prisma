@@ -27,7 +27,7 @@ model User {
   position      String?
   website       String?
 
-  image     String    @default("/images/default-avatar.jpg")
+  image     String    @default("https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/default-avatar.jpg")
   updatedAt DateTime  @updatedAt
   createdAt DateTime  @default(now())
   claimedAt DateTime?

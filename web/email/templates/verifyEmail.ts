@@ -44,7 +44,7 @@ export const template = `
           You are receiving this email because you requested a verification email for your <a href="http://localhost:5555/support" style="color: #202020; text-decoration:none;">Meetuppp</a> account. If you no longer would like to receive these emails, please <a href="http://localhost:5555/settings/notifications" style="color: #202020; text-decoration:none;">unsubscribe</a>.
         </mj-text>
 
-        <mj-image href="http://localhost:5555" target="_blank" width="120px" src="https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/logo-text.png" />
+        <mj-image href="http://localhost:5555" target="_blank" width="120px" src="https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/logo.png" />
       </mj-column>
     </mj-section>
   </mj-body>
