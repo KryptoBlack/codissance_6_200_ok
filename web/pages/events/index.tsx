@@ -1,3 +1,4 @@
+import { Input } from 'components/primitives/Input';
 import type { NextPage } from 'next';
 import { NextSeo } from 'next-seo';
 import Link from 'next/link';
@@ -24,23 +25,23 @@ const EventsPage: NextPage = () => {
 
 	const Seo = (
 		<NextSeo
-			title="Upcoming Events — Evental"
+			title="Upcoming Events — Meetuppp"
 			description="View all of the public upcoming events on evental.app."
-			canonical="https://evental.app/events"
+			canonical="http://localhost:5555/events"
 			openGraph={{
-				url: 'https://evental.app/events',
+				url: 'http://localhost:5555/events',
 				title: 'Upcoming Events',
 				description: 'View all of the public upcoming events on evental.app.',
 				images: [
 					{
-						url: 'https://cdn.evental.app/images/logo.jpg',
+						url: 'https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/logo.jpg',
 						width: 800,
 						height: 600,
-						alt: 'Evental Logo Alt',
+						alt: 'Meetuppp Logo Alt',
 						type: 'image/jpeg'
 					}
 				],
-				site_name: 'Evental'
+				site_name: 'Meetuppp'
 			}}
 		/>
 	);
@@ -83,6 +84,13 @@ const EventsPage: NextPage = () => {
 					<Heading className="mb-4 text-center">Upcoming Events</Heading>
 
 					{user && <EventsPageNavigation />}
+
+					<Input
+						placeholder="Start searching..."
+						onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+							e.preventDefault();
+						}}
+					/>
 
 					<EventList events={upcomingEvents} hidePastEvents />
 				</Column>

@@ -33,18 +33,18 @@ const EditingASessionCategoryGuidePage: NextPage = () => {
 
 			<PageWrapper>
 				<NextSeo
-					title="Editing a session category — Evental"
-					description={`Learn how to edit a session category for your event on Evental.`}
+					title="Editing a session category — Meetuppp"
+					description={`Learn how to edit a session category for your event on Meetuppp.`}
 					openGraph={{
-						url: 'https://evental.app/guides/session/editing-a-session-type',
-						title: 'Editing a session category — Evental',
-						description: `Learn how to edit a session category for your event on Evental.`,
+						url: 'http://localhost:5555/guides/session/editing-a-session-type',
+						title: 'Editing a session category — Meetuppp',
+						description: `Learn how to edit a session category for your event on Meetuppp.`,
 						images: [
 							{
-								url: 'https://cdn.evental.app/images/logo.jpg',
+								url: 'https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/logo.jpg',
 								width: 389,
 								height: 389,
-								alt: 'Evental Logo Alt',
+								alt: 'Meetuppp Logo Alt',
 								type: 'image/jpeg'
 							}
 						]
@@ -55,7 +55,7 @@ const EditingASessionCategoryGuidePage: NextPage = () => {
 					<Column className="flex flex-col items-center">
 						<Heading>Editing a session category</Heading>
 						<p className="mt-4 text-base text-gray-100">
-							Learn how to edit a session category for your event on Evental.
+							Learn how to edit a session category for your event on Meetuppp.
 						</p>
 					</Column>
 				</div>

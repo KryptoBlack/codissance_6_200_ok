@@ -20,18 +20,18 @@ const AttendingASessionGuidePage: NextPage = () => {
 
 			<PageWrapper>
 				<NextSeo
-					title="Attending a session — Evental"
+					title="Attending a session — Meetuppp"
 					description={`Learn how to attend a session on evental.`}
 					openGraph={{
-						url: 'https://evental.app/guides/attendee/attending-a-session',
-						title: 'Attending a session — Evental',
+						url: 'http://localhost:5555/guides/attendee/attending-a-session',
+						title: 'Attending a session — Meetuppp',
 						description: `Learn how to attend a session on evental.`,
 						images: [
 							{
-								url: 'https://cdn.evental.app/images/logo.jpg',
+								url: 'https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/logo.jpg',
 								width: 389,
 								height: 389,
-								alt: 'Evental Logo Alt',
+								alt: 'Meetuppp Logo Alt',
 								type: 'image/jpeg'
 							}
 						]

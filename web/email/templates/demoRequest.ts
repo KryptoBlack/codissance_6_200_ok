@@ -38,7 +38,7 @@ export const sendDemoRequest = async (args: SupportTicketEmailArgs) => {
 			ToAddresses: [args.sendToAddress]
 		},
 		ReplyToAddresses: [`${args.payload.name} <${args.payload.email}>`],
-		FromEmailAddress: '"Evental" <no-reply@evental.app>'
+		FromEmailAddress: '"Meetuppp" <no-reply@evental.app>'
 	};
 
 	await sendEmail(params).catch((err) => {

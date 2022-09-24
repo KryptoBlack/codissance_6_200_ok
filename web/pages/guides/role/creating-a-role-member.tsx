@@ -31,18 +31,18 @@ const CreatingRoleMemberGuidePage: NextPage = () => {
 
 			<PageWrapper>
 				<NextSeo
-					title="Creating a role member — Evental"
-					description={`Learn how to create a role member to your event on Evental.`}
+					title="Creating a role member — Meetuppp"
+					description={`Learn how to create a role member to your event on Meetuppp.`}
 					openGraph={{
-						url: 'https://evental.app/guides/role/creating-a-role-member',
-						title: 'Creating a role member — Evental',
-						description: `Learn how to create a role member to your event on Evental.`,
+						url: 'http://localhost:5555/guides/role/creating-a-role-member',
+						title: 'Creating a role member — Meetuppp',
+						description: `Learn how to create a role member to your event on Meetuppp.`,
 						images: [
 							{
-								url: 'https://cdn.evental.app/images/logo.jpg',
+								url: 'https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/logo.jpg',
 								width: 389,
 								height: 389,
-								alt: 'Evental Logo Alt',
+								alt: 'Meetuppp Logo Alt',
 								type: 'image/jpeg'
 							}
 						]
@@ -53,7 +53,7 @@ const CreatingRoleMemberGuidePage: NextPage = () => {
 					<Column className="flex flex-col items-center">
 						<Heading>Creating a role member</Heading>
 						<p className="mt-4 text-base text-gray-100">
-							Learn how to create a role member to your event on Evental.
+							Learn how to create a role member to your event on Meetuppp.
 						</p>
 					</Column>
 				</div>
@@ -124,7 +124,7 @@ const CreatingRoleMemberGuidePage: NextPage = () => {
 						<p className="mb-4 text-gray-700">
 							Select the <span className="font-medium">"Create"</span> button, then enter the users
 							basic information, picture, and email then hit "Create". After creating a role member,
-							this user will receive an email with instructions on how to claim their Evental
+							this user will receive an email with instructions on how to claim their Meetuppp
 							account.
 						</p>
 					</GuideSection>

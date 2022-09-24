@@ -29,7 +29,7 @@ const EventRegisterPage: NextPage = () => {
 
 	const Seo = event && (
 		<NextSeo
-			title={`Register for ${event.name} — Evental`}
+			title={`Register for ${event.name} — Meetuppp`}
 			description={`Fill out the form below to register for ${
 				event.name
 			} taking place from ${formatInTimeZone(
@@ -40,12 +40,12 @@ const EventRegisterPage: NextPage = () => {
 			additionalLinkTags={[
 				{
 					rel: 'icon',
-					href: `https://cdn.evental.app${event.image}`
+					href: event.image
 				}
 			]}
 			openGraph={{
-				url: `https://evental.app/events/${event.slug}/register`,
-				title: `Register for ${event.name} — Evental`,
+				url: `http://localhost:5555/events/${event.slug}/register`,
+				title: `Register for ${event.name} — Meetuppp`,
 				description: `Fill out the form below to register for ${
 					event.name
 				} taking place from ${formatInTimeZone(
@@ -55,7 +55,7 @@ const EventRegisterPage: NextPage = () => {
 				)} to ${formatInTimeZone(event.endDate, event.timeZone, 'MMMM do')}.`,
 				images: [
 					{
-						url: `https://cdn.evental.app${event.image}`,
+						url: event.image,
 						width: 300,
 						height: 300,
 						alt: `${event.name} Logo Alt`,
@@ -107,7 +107,7 @@ const EventRegisterPage: NextPage = () => {
 					</Column>
 				</PageWrapper>
 
-				<Footer color={event?.color} />
+				<Footer />
 			</>
 		);
 	}
@@ -144,7 +144,7 @@ const EventRegisterPage: NextPage = () => {
 				</Column>
 			</PageWrapper>
 
-			<Footer color={event?.color} />
+			<Footer />
 		</>
 	);
 };

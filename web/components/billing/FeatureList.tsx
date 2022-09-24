@@ -30,7 +30,7 @@ export const FeatureList: React.FC = () => {
 					Virtual &amp; Hybrid Events
 				</h3>
 				<ul className="list-disc space-y-0.5 pl-5 text-gray-600">
-					<li>Use Evental with any webinar or video platform</li>
+					<li>Use Meetuppp with any webinar or video platform</li>
 					<li>Automatically display times in users timezone</li>
 					<li>Provide post-event access to session recordings</li>
 				</ul>
@@ -68,7 +68,7 @@ export const FeatureList: React.FC = () => {
 					<li>Remove attendees from your event</li>
 					<li>Create organizers to assist you in running your event</li>
 					<li>Export event and session data</li>
-					<li>Access to Evental API</li>
+					<li>Access to Meetuppp API</li>
 				</ul>
 			</div>
 			<div>

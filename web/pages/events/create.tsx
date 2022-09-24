@@ -24,18 +24,18 @@ const CreateEventPage: NextPage = () => {
 
 	const Seo = (
 		<NextSeo
-			title="Create an event — Evental"
+			title="Create an event — Meetuppp"
 			description="Fill out the form to create an event."
 			openGraph={{
-				url: 'https://evental.app/events/create',
+				url: 'http://localhost:5555/events/create',
 				title: 'Create an event',
 				description: 'Fill out the form to create an event.',
 				images: [
 					{
-						url: 'https://cdn.evental.app/images/logo.jpg',
+						url: 'https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/logo.jpg',
 						width: 389,
 						height: 389,
-						alt: 'Evental Logo Alt',
+						alt: 'Meetuppp Logo Alt',
 						type: 'image/jpeg'
 					}
 				]

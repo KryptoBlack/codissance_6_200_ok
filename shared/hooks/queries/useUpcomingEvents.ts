@@ -5,12 +5,16 @@ import { useQuery } from 'react-query';
 
 import { api } from '../../api';
 
-export const useUpcomingEvents = () => {
+export const useUpcomingEvents = (limit?: number) => {
 	return useQuery<Prisma.Event[], ErroredAPIResponse>(
 		['upcoming-events'],
 		async () => {
 			return api
-				.get<SuccessAPIResponse<Prisma.Event[]>>(`/events/`)
+				.get<SuccessAPIResponse<Prisma.Event[]>>(`/events/`, {
+					params: {
+						limit: limit
+					}
+				})
 				.then((res) => res.data.data)
 				.catch((err: AxiosError<ErroredAPIResponse>) => {
 					throw err.response?.data;

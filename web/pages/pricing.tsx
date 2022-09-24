@@ -26,18 +26,18 @@ const PricingPage: NextPage = () => {
 	return (
 		<>
 			<NextSeo
-				title="Pricing — Evental"
+				title="Pricing — Meetuppp"
 				description={`Single Event Plans & Pricing. Starting at ${proAttendeePricing[250].price} USD.`}
 				openGraph={{
-					url: 'https://evental.app/pricing',
-					title: 'Pricing — Evental',
+					url: 'http://localhost:5555/pricing',
+					title: 'Pricing — Meetuppp',
 					description: `Single Event Plans & Pricing. Starting at ${proAttendeePricing[250].price} USD.`,
 					images: [
 						{
-							url: 'https://cdn.evental.app/images/logo.jpg',
+							url: 'https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/logo.jpg',
 							width: 389,
 							height: 389,
-							alt: 'Evental Logo Alt',
+							alt: 'Meetuppp Logo Alt',
 							type: 'image/jpeg'
 						}
 					]
@@ -147,7 +147,7 @@ const PricingPage: NextPage = () => {
 								className="mr-2 font-display text-2xl font-bold tracking-tight lg:text-3xl"
 								aria-label="evental homepage"
 							>
-								Evental
+								Meetuppp
 							</strong>
 							<span className="rounded bg-primary py-1 px-2 text-xs font-medium text-white lg:text-base">
 								{isEducation ? 'EDU' : 'PRO'}

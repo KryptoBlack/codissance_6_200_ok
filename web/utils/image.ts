@@ -98,7 +98,7 @@ export const uploadAndProcessAvatar = async (buffer: Buffer, mimeType: string | 
 		const sharpImage = await processAvatar(buffer, { toFormat: 'png', height: 300, width: 300 });
 
 		const params: S3.Types.PutObjectRequest = {
-			Bucket: 'evental/images',
+			Bucket: 'meetuppp-assets',
 			Key: `${crypto.randomBytes(20).toString('hex')}.png`,
 			Body: sharpImage,
 			ContentType: mimeType
@@ -121,7 +121,7 @@ export const uploadAndProcessImage = async (buffer: Buffer, mimeType: string | u
 		});
 
 		const params: S3.Types.PutObjectRequest = {
-			Bucket: 'evental/images',
+			Bucket: 'meetuppp-assets',
 			Key: `${crypto.randomBytes(20).toString('hex')}.jpg`,
 			Body: sharpImage,
 			ContentType: mimeType

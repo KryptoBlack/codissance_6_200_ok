@@ -17,17 +17,17 @@ const NotificationsPage: NextPage = () => {
 	return (
 		<SettingsPageWrapper>
 			<NextSeo
-				title="Notifications — Evental"
+				title="Notifications — Meetuppp"
 				description="Update your notification preferences"
 				openGraph={{
-					title: 'Notifications — Evental',
+					title: 'Notifications — Meetuppp',
 					description: 'Update your notification preferences',
 					images: [
 						{
-							url: 'https://cdn.evental.app/images/logo.jpg',
+							url: 'https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/logo.jpg',
 							width: 389,
 							height: 389,
-							alt: 'Evental Logo Alt',
+							alt: 'Meetuppp Logo Alt',
 							type: 'image/jpeg'
 						}
 					]

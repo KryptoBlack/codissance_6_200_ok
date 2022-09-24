@@ -2,6 +2,6 @@
 module.exports = {
 	siteUrl:
 		(process.env.NEXT_PUBLIC_VERCEL_URL && `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`) ||
-		'https://evental.app',
+		'http://localhost:5555',
 	generateRobotsTxt: true
 };

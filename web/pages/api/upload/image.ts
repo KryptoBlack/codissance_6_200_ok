@@ -33,7 +33,7 @@ export default api({
 		}
 
 		const body: ImageUploadResponse = {
-			pathName: fileLocation
+			pathName: `https://meetuppp-assets.s3.ap-south-1.amazonaws.com${fileLocation}`
 		};
 
 		return body;

@@ -30,18 +30,18 @@ const CreatingARoleGuidePage: NextPage = () => {
 
 			<PageWrapper>
 				<NextSeo
-					title="Creating a role — Evental"
-					description={`Learn how to create a role for your event on Evental.`}
+					title="Creating a role — Meetuppp"
+					description={`Learn how to create a role for your event on Meetuppp.`}
 					openGraph={{
-						url: 'https://evental.app/guides/role/creating-a-role',
-						title: 'Creating a role — Evental',
-						description: `Learn how to create a role for your event on Evental.`,
+						url: 'http://localhost:5555/guides/role/creating-a-role',
+						title: 'Creating a role — Meetuppp',
+						description: `Learn how to create a role for your event on Meetuppp.`,
 						images: [
 							{
-								url: 'https://cdn.evental.app/images/logo.jpg',
+								url: 'https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/logo.jpg',
 								width: 389,
 								height: 389,
-								alt: 'Evental Logo Alt',
+								alt: 'Meetuppp Logo Alt',
 								type: 'image/jpeg'
 							}
 						]
@@ -52,7 +52,7 @@ const CreatingARoleGuidePage: NextPage = () => {
 					<Column className="flex flex-col items-center">
 						<Heading>Creating a role</Heading>
 						<p className="mt-4 text-base text-gray-100">
-							Learn how to create a role for your event on Evental.
+							Learn how to create a role for your event on Meetuppp.
 						</p>
 					</Column>
 				</div>

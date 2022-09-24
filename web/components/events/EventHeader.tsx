@@ -96,8 +96,8 @@ export const EventHeader: React.FC<{
 									alt={event.name}
 									src={
 										event.image
-											? `https://cdn.evental.app${event.image}`
-											: `https://cdn.evental.app/images/default-event.jpg`
+											? event.image
+											: `https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/default-event.jpg`
 									}
 									layout="fill"
 									className="rounded-md"

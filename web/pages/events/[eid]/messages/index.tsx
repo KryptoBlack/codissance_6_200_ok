@@ -38,16 +38,16 @@ const MessagesPage: NextPage = () => {
 			additionalLinkTags={[
 				{
 					rel: 'icon',
-					href: `https://cdn.evental.app${event.image}`
+					href: event.image
 				}
 			]}
 			openGraph={{
-				url: `https://evental.app/events/${event.slug}/messages`,
+				url: `http://localhost:5555/events/${event.slug}/messages`,
 				title: `Messages — ${event.name}`,
 				description: `View all of the messages at ${event.name}.`,
 				images: [
 					{
-						url: `https://cdn.evental.app${event.image}`,
+						url: event.image,
 						width: 300,
 						height: 300,
 						alt: `${event.name} Logo Alt`,
@@ -76,7 +76,7 @@ const MessagesPage: NextPage = () => {
 				</Column>
 			</PageWrapper>
 
-			<Footer color={event?.color} />
+			<Footer />
 		</>
 	);
 };

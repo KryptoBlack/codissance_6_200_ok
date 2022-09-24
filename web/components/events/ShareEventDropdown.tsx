@@ -34,7 +34,7 @@ export const ShareEventDropdown: React.FC<Props> = (props) => {
 				>
 					<a
 						href={twitterLink(`${baseURL}/events/${event.slug}`, {
-							title: `Checkout ${event.name} on Evental!`,
+							title: `Checkout ${event.name} on Meetuppp!`,
 							hashtags: ['evental', 'eventalapp'],
 							via: 'eventaldotapp',
 							related: ['eventalapp', 'eventalapp.com']
@@ -61,7 +61,7 @@ export const ShareEventDropdown: React.FC<Props> = (props) => {
 						href={facebookLink(
 							`${process.env.VERCEL_URL || 'http://localhost:3000'}/events/${event.slug}`,
 							{
-								quote: `Checkout ${event.name} on Evental!`,
+								quote: `Checkout ${event.name} on Meetuppp!`,
 								hashtag: 'evental'
 							}
 						)}
@@ -86,9 +86,9 @@ export const ShareEventDropdown: React.FC<Props> = (props) => {
 
 					<a
 						href={linkedinLink(`${baseURL}/events/${event.slug}`, {
-							source: 'Evental',
-							title: `Checkout ${event.name} on Evental!`,
-							summary: `Checkout ${event.name} on Evental!`
+							source: 'Meetuppp',
+							title: `Checkout ${event.name} on Meetuppp!`,
+							summary: `Checkout ${event.name} on Meetuppp!`
 						})}
 						target="_blank"
 						rel="noopener noreferrer"
@@ -110,9 +110,9 @@ export const ShareEventDropdown: React.FC<Props> = (props) => {
 					</a>
 					<a
 						href={emailLink(`${baseURL}/events/${event.slug}`, {
-							body: `Join me at ${event.name} on Evental!`,
+							body: `Join me at ${event.name} on Meetuppp!`,
 							separator: '\n',
-							subject: `Checkout ${event.name} on Evental!`
+							subject: `Checkout ${event.name} on Meetuppp!`
 						})}
 						target="_blank"
 						rel="noopener noreferrer"

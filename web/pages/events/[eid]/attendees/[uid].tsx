@@ -43,16 +43,16 @@ const ViewAttendeePage: NextPage = () => {
 			additionalLinkTags={[
 				{
 					rel: 'icon',
-					href: `https://cdn.evental.app${event.image}`
+					href: event.image
 				}
 			]}
 			openGraph={{
-				url: `https://evental.app/events/${event.slug}/attendees/${attendee.user.id}`,
+				url: `http://localhost:5555/events/${event.slug}/attendees/${attendee.user.id}`,
 				title: `${attendee.user.name} — ${event.name}`,
 				description: `View ${attendee.user.name} at ${event.name}.`,
 				images: [
 					{
-						url: `https://cdn.evental.app${attendee.user.image}`,
+						url: attendee.user.image,
 						width: 300,
 						height: 300,
 						alt: `${attendee.user.name} Avatar Alt`,
@@ -75,7 +75,7 @@ const ViewAttendeePage: NextPage = () => {
 				</Column>
 			</PageWrapper>
 
-			<Footer color={event?.color} />
+			<Footer />
 		</>
 	);
 };

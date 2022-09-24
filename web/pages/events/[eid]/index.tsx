@@ -87,21 +87,21 @@ const ViewEventPage: NextPage = () => {
 
 	const Seo = event && (
 		<NextSeo
-			title={`${event.name} — Evental`}
+			title={`${event.name} — Meetuppp`}
 			description={htmlToText(event.description || '')}
 			additionalLinkTags={[
 				{
 					rel: 'icon',
-					href: `https://cdn.evental.app${event.image}`
+					href: event.image
 				}
 			]}
 			openGraph={{
-				url: `https://evental.app/events/${event.slug}`,
-				title: `${event.name} — Evental`,
+				url: `http://localhost:5555/events/${event.slug}`,
+				title: `${event.name} — Meetuppp`,
 				description: htmlToText(event.description || ''),
 				images: [
 					{
-						url: `https://cdn.evental.app${event.image}`,
+						url: event.image,
 						width: 300,
 						height: 300,
 						alt: `${event.name} Logo Alt`,

@@ -27,7 +27,7 @@ const template = `
   <mj-body>
     <mj-section padding-bottom="0">
       <mj-column>
-        <mj-image href="https://evental.app" target="_blank" width="40px" src="{{eventImageUrl}}" />
+        <mj-image href="http://localhost:5555" target="_blank" width="40px" src="{{eventImageUrl}}" />
 
         <mj-text font-weight="medium" font-size="20px" color="#777777" align="center" font-family="Inter, Roboto, Arial" line-height="1.4">
           <a href="{{eventUrl}}" style="text-decoration:none;color: #777777;">{{eventName}}</a>
@@ -44,7 +44,7 @@ const template = `
 
         <mj-text font-size="16px" color="#777777" font-family="Inter, Roboto, Arial" line-height="1.4">{{body}}
         </mj-text>
-        
+
            <mj-text font-size="13px" color="#777777" font-family="Inter, Roboto, Arial" line-height="1.4" align="left">
              <a href="{{messageUrl}}" style="color: #0066FF; text-decoration:none;">
                View Full Message
@@ -59,13 +59,13 @@ const template = `
 
         <mj-text font-size="12px" color="#777777" font-family="Inter, Roboto, Arial" line-height="1.4" align="center">
           You are receiving this email because you are attending <a href="{{eventUrl}}" style="color: #0066FF; text-decoration:none;">{{eventName}}</a>
-          
+
           <br />
-          
+
           To stop receiving emails from <a href="{{eventUrl}}" style="color: #0066FF; text-decoration:none;">{{eventName}}</a>, please <a href="{{eventUrl}}" style="color: #0066FF; text-decoration:none;">leave the event</a>.
         </mj-text>
 
-        <mj-image href="https://evental.app" target="_blank" width="120px" src="https://cdn.evental.app/images/logo-text.png" />
+        <mj-image href="http://localhost:5555" target="_blank" width="120px" src="https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/logo.png" />
       </mj-column>
     </mj-section>
   </mj-body>
@@ -105,12 +105,12 @@ export const sendEventMessage = async (args: SendEventMessageArgs) => {
 	}));
 
 	const templateData: EventMessageTemplateArgs = {
-		eventImageUrl: `https://cdn.evental.app${event.image}`,
-		eventUrl: `https://evental.app/events/${event.slug}`,
+		eventImageUrl: event.image,
+		eventUrl: `http://localhost:5555/events/${event.slug}`,
 		eventName: event.name,
 		title,
 		body,
-		messageUrl: `https://evental.app/events/${event.slug}/messages/${message.slug}`
+		messageUrl: `http://localhost:5555/events/${event.slug}/messages/${message.slug}`
 	};
 
 	const params: SESV2.SendBulkEmailRequest = {

@@ -16,6 +16,7 @@ import { HelpTooltip } from '../primitives/HelpTooltip';
 import { Input } from '../primitives/Input';
 import { Label } from '../primitives/Label';
 import Tooltip from '../primitives/Tooltip';
+import { baseURL } from '@eventalapp/shared/api';
 
 type Props = {
 	user: FullUser;
@@ -80,7 +81,7 @@ export const EditUserForm: React.FC<Props> = (props) => {
 							<AvatarUpload
 								files={files}
 								setFiles={setFiles}
-								placeholderImageUrl={`https://cdn.evental.app${user.image}`}
+								placeholderImageUrl={user.image}
 							/>
 						</div>
 					</Tooltip>
@@ -93,7 +94,7 @@ export const EditUserForm: React.FC<Props> = (props) => {
 						Username *<HelpTooltip message={copy.tooltip.userSlug} />
 					</Label>
 					<div className="flex items-center">
-						<span className="mr-1 text-base text-gray-700">evental.app/users/</span>
+						<span className="mr-1 text-base text-gray-700">{baseURL}</span>
 						<Input placeholder="user-slug" {...register('slug')} />
 					</div>
 					{errors.slug?.message && <ErrorMessage>{errors.slug?.message}</ErrorMessage>}

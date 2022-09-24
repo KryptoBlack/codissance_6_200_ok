@@ -32,18 +32,18 @@ const InvitingSessionMemberGuidePage: NextPage = () => {
 
 			<PageWrapper>
 				<NextSeo
-					title="Attach a role member — Evental"
-					description={`Learn how to attach a role member to your session on Evental.`}
+					title="Attach a role member — Meetuppp"
+					description={`Learn how to attach a role member to your session on Meetuppp.`}
 					openGraph={{
-						url: 'https://evental.app/guides/session/attaching-a-role-member',
-						title: 'Attach a role member — Evental',
-						description: `Learn how to attach a role member to your session on Evental.`,
+						url: 'http://localhost:5555/guides/session/attaching-a-role-member',
+						title: 'Attach a role member — Meetuppp',
+						description: `Learn how to attach a role member to your session on Meetuppp.`,
 						images: [
 							{
-								url: 'https://cdn.evental.app/images/logo.jpg',
+								url: 'https://meetuppp-assets.s3.ap-south-1.amazonaws.com/images/logo.jpg',
 								width: 389,
 								height: 389,
-								alt: 'Evental Logo Alt',
+								alt: 'Meetuppp Logo Alt',
 								type: 'image/jpeg'
 							}
 						]
@@ -52,9 +52,9 @@ const InvitingSessionMemberGuidePage: NextPage = () => {
 
 				<div className="bg-primary-700 text-white">
 					<Column className="flex flex-col items-center">
-						<Heading>Attach a role member — Evental</Heading>
+						<Heading>Attach a role member — Meetuppp</Heading>
 						<p className="mt-4 text-base text-gray-100">
-							Learn how to attach a role member to your session on Evental
+							Learn how to attach a role member to your session on Meetuppp
 						</p>
 					</Column>
 				</div>

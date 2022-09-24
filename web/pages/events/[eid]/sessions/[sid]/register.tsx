@@ -43,16 +43,16 @@ const SessionRegisterPage: NextPage = () => {
 			additionalLinkTags={[
 				{
 					rel: 'icon',
-					href: `https://cdn.evental.app${event.image}`
+					href: event.image
 				}
 			]}
 			openGraph={{
-				url: `https://evental.app/events/${event.slug}/sessions/${session.slug}/register`,
+				url: `http://localhost:5555/events/${event.slug}/sessions/${session.slug}/register`,
 				title: `Register for ${session.name} — ${event.name}`,
 				description: `Register for the ${session.name} session at ${event.name}`,
 				images: [
 					{
-						url: `https://cdn.evental.app${event.image}`,
+						url: event.image,
 						width: 300,
 						height: 300,
 						alt: `${event.name} Logo Alt`,
@@ -83,7 +83,7 @@ const SessionRegisterPage: NextPage = () => {
 				</Column>
 			</PageWrapper>
 
-			<Footer color={event?.color} />
+			<Footer />
 		</>
 	);
 };

@@ -12,11 +12,12 @@ type Props = {
 	variant?: keyof typeof variants;
 	color?: string;
 	onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+	onSubmit?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 	[x: string]: unknown;
 } & React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>;
 
 export const Input = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
-	const { className, children, variant = 'default', color, onChange, ...rest } = props;
+	const { className, children, variant = 'default', color, onChange, onSubmit, ...rest } = props;
 
 	return (
 		<input
@@ -27,6 +28,7 @@ export const Input = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
 			)}
 			ref={ref}
 			onChange={onChange}
+			onSubmit={onSubmit}
 			style={{
 				// @ts-ignore
 				'--tw-ring-color': color ?? theme.extend.colors.gray[700]

@@ -41,7 +41,7 @@ const OrganizerInvitePage: NextPage = () => {
 			additionalLinkTags={[
 				{
 					rel: 'icon',
-					href: `https://cdn.evental.app${event.image}`
+					href: event.image
 				}
 			]}
 		/>
@@ -90,7 +90,7 @@ const OrganizerInvitePage: NextPage = () => {
 					</Column>
 				</PageWrapper>
 
-				<Footer color={event?.color} />
+				<Footer />
 			</>
 		);
 	}
@@ -130,7 +130,7 @@ const OrganizerInvitePage: NextPage = () => {
 				</Column>
 			</PageWrapper>
 
-			<Footer color={event?.color} />
+			<Footer />
 		</>
 	);
 };
