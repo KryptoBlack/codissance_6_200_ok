@@ -12,7 +12,7 @@
 	"scripts": {
 		"docker": "docker-compose up -d",
 		"quickstart": "yarn && yarn docker && yarn dev",
-		"build": "shared prepare && next build",
+		"build": "yarn workspace @eventalapp/shared generate && next build",
 		"postbuild": "next-sitemap",
 		"start": "next start",
 		"dev": "next dev -p 5555",
